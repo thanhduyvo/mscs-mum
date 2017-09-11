@@ -1,4 +1,4 @@
-package sample;
+package mpp.ssa.presentation;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

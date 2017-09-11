@@ -1,4 +1,4 @@
-package sample;
+package mpp.ssa.presentation;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
