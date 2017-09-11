@@ -1164,7 +1164,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Shopping Cart",
+											"text": "ShoppingCart",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -2125,7 +2125,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Shipping Info",
+											"text": "ShippingInfo",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -4246,7 +4246,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "User Settings",
+											"text": "UserSettings",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -4712,7 +4712,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Product Category",
+											"text": "ProductCategory",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -9011,7 +9011,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "User Type",
+											"text": "UserType",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -12048,7 +12048,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Shopping Cart",
+					"name": "ShoppingCart",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -12431,7 +12431,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Shipping Info",
+					"name": "ShippingInfo",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -13301,7 +13301,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "User Settings",
+					"name": "UserSettings",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -13461,7 +13461,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Product Category",
+					"name": "ProductCategory",
 					"visibility": "public",
 					"attributes": [
 						{
@@ -13512,7 +13512,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "User Type",
+					"name": "UserType",
 					"stereotype": "abstract",
 					"visibility": "public",
 					"attributes": [
