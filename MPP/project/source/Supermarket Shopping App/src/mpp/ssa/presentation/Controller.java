@@ -4,30 +4,34 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+
 public class Controller {
 
     @FXML
-    private Button SignUp;
+    private Button CartButton;
 
     @FXML
-    private Button Login;
+    private Button LoginButton;
 
     @FXML
-    private Button Cart;
+    private Button SignupButton;
 
     @FXML
-    void Login(ActionEvent event) {
+    void LoginButton(ActionEvent event) {
 
     }
 
     @FXML
-    void SignUp(ActionEvent event) {
+    void SignupButton(ActionEvent event) {
 
     }
 
     @FXML
-    void Cart(ActionEvent event) {
+    void CartButton(ActionEvent event) {
 
     }
 
 }
+

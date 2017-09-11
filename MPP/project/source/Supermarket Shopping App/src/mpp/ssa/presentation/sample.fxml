@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.*?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.Controller">
    <top>
-      <HBox prefHeight="42.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="45.0" prefWidth="656.0" BorderPane.alignment="CENTER">
          <children>
             <MenuButton mnemonicParsing="false" text="Menu">
               <items>
@@ -16,24 +16,31 @@
                 <MenuItem mnemonicParsing="false" text="Action 2" />
               </items>
             </MenuButton>
-            <TextField prefHeight="39.0" prefWidth="280.0" text="Search">
+            <TextField prefHeight="39.0" prefWidth="266.0" promptText="Search">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
             </TextField>
-            <Button fx:id="Login" mnemonicParsing="false" onAction="#Login" text="Login">
+            <Button fx:id="LoginButton" mnemonicParsing="false" onAction="#LoginButton" text="Login">
                <HBox.margin>
-                  <Insets left="10.0" />
+                  <Insets left="20.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="SignUp" mnemonicParsing="false" onAction="#SignUp" text="Sign up">
+            <Button fx:id="SignupButton" mnemonicParsing="false" onAction="#SignupButton" text="Sign up">
                <HBox.margin>
-                  <Insets left="7.0" />
+                  <Insets left="8.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="Cart" mnemonicParsing="false" onAction="#Cart" text="Cart">
+            <Button fx:id="CartButton" mnemonicParsing="false" onAction="#CartButton" text="Cart">
                <HBox.margin>
-                  <Insets left="10.0" />
+                  <Insets left="20.0" />
                </HBox.margin>
             </Button>
          </children>
