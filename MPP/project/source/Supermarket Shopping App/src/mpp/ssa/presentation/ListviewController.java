@@ -25,7 +25,7 @@ import java.util.List;
 public class ListviewController extends Controller{
     AnchorPane ListPane = new AnchorPane();
     ObservableList<HBoxCell> Obser;
-    HBoxCell item;
+    static HBoxCell item;
 
     @FXML
     ListView<HBoxCell> listView;
@@ -48,11 +48,16 @@ public class ListviewController extends Controller{
 
     public void showProuct(){
         Product a = new Product();
-        a.setProductName("item1");
+        a.setProductName("item A");
         a.setUnitCost(1234);
+
+        Product b = new Product();
+        b.setProductName("item B");
+        b.setUnitCost(4432);
 
         List<HBoxCell> list = new ArrayList<>();
         list.add(new HBoxCell(a));
+        list.add(new HBoxCell(b));
 
         listView = new ListView<HBoxCell>();
         ObservableList<HBoxCell> myObservableList = FXCollections.observableList(list);
@@ -60,11 +65,11 @@ public class ListviewController extends Controller{
         listView.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-               HBoxCell item = listView.getSelectionModel().getSelectedItem();
-               System.out.print(item.labelName);
+                item = listView.getSelectionModel().getSelectedItem();
                 ProductDetailController productDetailController = new ProductDetailController();
                 productDetailController.createTilePane();
                 productDetailController.labelName.setText(item.labelName);
+                productDetailController.labelCost.setText(item.labelCost);
                 Main.primaryStage.setScene(new Scene(productDetailController.anchorPane,600,400));
             }
         });

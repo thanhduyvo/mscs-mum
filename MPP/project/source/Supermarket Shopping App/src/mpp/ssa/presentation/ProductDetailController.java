@@ -18,15 +18,26 @@ public class ProductDetailController extends Controller{
     AnchorPane anchorPane = new AnchorPane();
     @FXML
     Label labelName;
+    @FXML
+    Label labelCost;
+
+    @FXML
+    public void handleBackBtn2(ActionEvent event){
+        Main.primaryStage.setScene(prviousScene);
+    }
 
     public void createTilePane(){
         try {
+            Controller.setPrviousScene();
             anchorPane = FXMLLoader.load(getClass().getResource("product_detail.fxml"));
             labelName = new Label();
             labelName = (Label) anchorPane.lookup("#labelName");
+            labelCost = new Label();
+            labelCost = (Label) anchorPane.lookup("#labelCost");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
 }

@@ -14,10 +14,17 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Label fx:id="labelName" layoutX="260.0" layoutY="39.0" prefHeight="40.0" prefWidth="82.0">
+      <Label fx:id="labelName" layoutX="260.0" layoutY="39.0" prefHeight="45.0" prefWidth="209.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
+      <Label fx:id="labelCost" layoutX="260.0" layoutY="131.0" prefHeight="35.0" prefWidth="67.0" />
+      <Text layoutX="145.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Button layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackBtn2" text="Back" />
    </children>
 </AnchorPane>

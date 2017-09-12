@@ -32,7 +32,7 @@ public class Controller{
 
     final BorderPane root = Main.getRoot();
     final AnchorPane PaneListview = Main.getPanelistView();
-    Scene prviousScene = Main.primaryStage.getScene();
+    public static Scene prviousScene = Main.primaryStage.getScene();
 
     static String USERNAME, PASSWORD;
     public static String getUsername(){
@@ -42,13 +42,17 @@ public class Controller{
         return PASSWORD;
     }
 
+    public static void setPrviousScene(){
+        prviousScene = Main.primaryStage.getScene();
+    }
+
     @FXML
     void handleLogin(ActionEvent event){
 
     }
 
     @FXML
-    void handleBackBtn(ActionEvent event){
+    public void handleBackBtn(ActionEvent event){
         Main.primaryStage.setScene(prviousScene);
     }
 
