@@ -35,13 +35,19 @@ public class Main extends Application {
             root = FXMLLoader.load(getClass().getResource("home_screen.fxml"));
             primaryStage.setTitle("Shopping - MUM");
             primaryStage.setScene(new Scene(root, 1042, 635));
+            //creatList();
+            HeaderController headerController = new HeaderController();
+            headerController.createHeader();
+            root.setTop(headerController.Header);
+            ListviewController listviewController = new ListviewController();
+            listviewController.createListPane();
+            listviewController.showProuct();
+            root.setCenter(listviewController.listView);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-
 
     public static void main(String[] args) {
         launch(args);

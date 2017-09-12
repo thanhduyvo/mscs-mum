@@ -13,6 +13,6 @@
       <Button fx:id="CheckLoginBtn" layoutX="400.0" layoutY="214.0" mnemonicParsing="false" onAction="#handleCheckLogin" prefHeight="39.0" prefWidth="90.0" text="Login" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="214.0" />
       <Hyperlink layoutX="142.0" layoutY="276.0" prefHeight="35.0" prefWidth="224.0" text="Sigup now" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="276.0" />
       <Text layoutX="222.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="100.205078125" AnchorPane.leftAnchor="222.0" AnchorPane.topAnchor="66.0" />
-      <Button layoutX="490.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back" />
+      <Button layoutX="32.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back" />
    </children>
 </AnchorPane>
