@@ -28,6 +28,7 @@ public class Main extends Application {
 
     public static AnchorPane getPanelistView(){ return PanelistView;}
 
+
     @Override
     public void start(Stage primaryStage){
         this.primaryStage = primaryStage;
@@ -35,10 +36,11 @@ public class Main extends Application {
             root = FXMLLoader.load(getClass().getResource("home_screen.fxml"));
             primaryStage.setTitle("Shopping - MUM");
             primaryStage.setScene(new Scene(root, 1042, 635));
-            //creatList();
+
             HeaderController headerController = new HeaderController();
             headerController.createHeader();
             root.setTop(headerController.Header);
+
             ListviewController listviewController = new ListviewController();
             listviewController.createListPane();
             listviewController.showProuct();

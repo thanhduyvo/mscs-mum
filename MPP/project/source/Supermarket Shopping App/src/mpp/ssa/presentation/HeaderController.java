@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -13,9 +14,21 @@ import java.io.IOException;
  */
 public class HeaderController extends Controller{
     AnchorPane Header = new AnchorPane();
+    @FXML
+    Label labelUserName;
+
     public void createHeader(){
         try {
             Header = FXMLLoader.load(getClass().getResource("header_home.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void changeHeaderUser(){
+        try {
+            Header = FXMLLoader.load(getClass().getResource("header_user.fxml"));
+            labelUserName = (Label) Header.lookup("#labelUserName");
         } catch (IOException e) {
             e.printStackTrace();
         }

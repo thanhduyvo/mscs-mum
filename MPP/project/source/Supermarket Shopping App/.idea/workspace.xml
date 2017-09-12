@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5c11ef9-8163-4d34-a127-ee71e970ae97" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/ListviewController$1.class" afterPath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/ListviewController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/ListviewController$HBoxCell.class" afterPath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/ListviewController$HBoxCell.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/ListviewController.class" afterPath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/ListviewController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/ProductDetailController.class" afterPath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/ProductDetailController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/header_user.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/Controller.class" afterPath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/HeaderController.class" afterPath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/HeaderController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/Main.class" afterPath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/product_detail.fxml" afterPath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/presentation/product_detail.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/Controller.java" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/ListviewController.java" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/ListviewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/ProductDetailController.java" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/ProductDetailController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/product_detail.fxml" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/product_detail.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/HeaderController.java" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/HeaderController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/Main.java" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/login_screen.fxml" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/login_screen.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="43" column="44" lean-forward="false" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+            <state relative-caret-position="316">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -37,8 +36,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+            <state relative-caret-position="172">
+              <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1124#1125#0" expanded="true" />
@@ -48,11 +47,99 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListviewController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/ListviewController.java">
+      <file leaf-file-name="header_user.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/header_user.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+            <state relative-caret-position="257">
+              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+              <folding>
+                <marker date="1505257996922" expanded="true" signature="1216:1245" ph="..." />
+                <marker date="1505257996922" expanded="true" signature="1216:1231" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_screen.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/login_screen.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/mpp.ssa.dao" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/mpp.ssa.dao">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>mpp.ssa.dao</OriginalElement>
+              <nodes>
+                <node x="394.0" y="649.0">mpp.ssa.dao.UserDO</node>
+                <node x="2.5" y="97.0">mpp.ssa.dao.CustomerDAO</node>
+                <node x="248.0" y="281.0">mpp.ssa.dao.PromotionDAO</node>
+                <node x="0.0" y="557.0">mpp.ssa.dao.ProductDAO</node>
+                <node x="0.0" y="373.0">mpp.ssa.dao.UserSettingDO</node>
+                <node x="236.0" y="373.0">mpp.ssa.dao.DbConnection</node>
+                <node x="431.0" y="557.0">mpp.ssa.dao.ProductDO</node>
+                <node x="219.0" y="557.0">mpp.ssa.dao.LineItemDO</node>
+                <node x="291.0" y="189.0">mpp.ssa.dao.ProductCategoryDO</node>
+                <node x="0.0" y="281.0">mpp.ssa.dao.UserSettingDAO</node>
+                <node x="241.5" y="97.0">mpp.ssa.dao.UserDAO</node>
+                <node x="203.0" y="649.0">mpp.ssa.dao.OrderDO</node>
+                <node x="454.0" y="465.0">mpp.ssa.dao.CustomerDO</node>
+                <node x="0.0" y="189.0">mpp.ssa.dao.ProductCategoryDAO</node>
+                <node x="239.0" y="0.0">mpp.ssa.dao.IUserDAO</node>
+                <node x="0.0" y="649.0">mpp.ssa.dao.OrderDAO</node>
+                <node x="230.0" y="465.0">mpp.ssa.dao.LineItemDAO</node>
+                <node x="0.0" y="0.0">mpp.ssa.dao.ICustomerDAO</node>
+                <node x="0.0" y="465.0">mpp.ssa.dao.PromotionDO</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="mpp.ssa.dao.UserDAO" target="mpp.ssa.dao.IUserDAO">
+                  <point x="0.0" y="-23.5" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+                <edge source="mpp.ssa.dao.CustomerDAO" target="mpp.ssa.dao.ICustomerDAO">
+                  <point x="0.0" y="-23.5" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.7136871508379888" x="-357.7181996086106" y="286.2818003913894" />
+              <SelectedNodes>
+                <node>mpp.ssa.dao.ICustomerDAO</node>
+              </SelectedNodes>
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICustomerDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mpp/ssa/dao/ICustomerDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HeaderController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/HeaderController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,28 +147,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListView.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/ListView.java">
+      <file leaf-file-name="ListviewController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/ListviewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="457" column="43" lean-forward="false" selection-start-line="457" selection-start-column="43" selection-end-line="457" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product_detail.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/product_detail.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="-109">
+              <caret line="64" column="67" lean-forward="true" selection-start-line="64" selection-start-column="67" selection-end-line="64" selection-end-column="67" />
               <folding>
-                <marker date="1505256421627" expanded="true" signature="678:728" ph="..." />
-                <marker date="1505256421627" expanded="true" signature="941:1021" ph="..." />
-                <marker date="1505256421627" expanded="true" signature="957:1007" ph="..." />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,39 +172,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HeaderController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/HeaderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list_view.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/list_view.fxml">
+      <file leaf-file-name="header_home.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/header_home.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="87" lean-forward="true" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_screen.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/login_screen.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="253" lean-forward="false" selection-start-line="8" selection-start-column="206" selection-end-line="8" selection-end-column="253" />
+            <state relative-caret-position="171">
+              <caret line="10" column="97" lean-forward="false" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -178,16 +225,17 @@
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/Product.java" />
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/ListView.fxml" />
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/login_screen.fxml" />
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/home_screen.fxml" />
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/header_home.fxml" />
-        <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/HeaderController.java" />
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/list_view.fxml" />
-        <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/Main.java" />
-        <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/Controller.java" />
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/ProductDetailController.java" />
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/product_detail.fxml" />
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/ListviewController.java" />
+        <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/header_user.fxml" />
+        <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/Main.java" />
+        <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/Controller.java" />
+        <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/HeaderController.java" />
+        <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/login_screen.fxml" />
       </list>
     </option>
   </component>
@@ -264,6 +312,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="presentation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Supermarket Shopping App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Supermarket Shopping App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Supermarket Shopping App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Supermarket Shopping App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -734,12 +818,12 @@
       <workItem from="1505165427391" duration="556000" />
       <workItem from="1505227830921" duration="277000" />
       <workItem from="1505228162376" duration="13482000" />
-      <workItem from="1505248151067" duration="8278000" />
+      <workItem from="1505248151067" duration="9947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24624000" />
+    <option name="totallyTimeSpent" value="26293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -793,21 +877,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/domain/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/business/domain/Product Category.java" />
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/TestBranch.java" />
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/CustomerService.java" />
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/bus/UserSettingBUS.java">
@@ -878,24 +947,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/domain/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/domain/ShoppingCart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/domain/UserSetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -935,20 +990,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/dao/LineItemDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/dao/CustomerDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
@@ -1039,17 +1080,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/ListView.fxml" />
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/LoginController.java" />
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/header_home.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="172" lean-forward="false" selection-start-line="7" selection-start-column="172" selection-end-line="7" selection-end-column="172" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/home_screen.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1057,25 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="237" lean-forward="false" selection-start-line="7" selection-start-column="190" selection-end-line="7" selection-end-column="237" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="43" column="44" lean-forward="false" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/login_screen.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="253" lean-forward="false" selection-start-line="8" selection-start-column="206" selection-end-line="8" selection-end-column="253" />
           <folding />
         </state>
       </provider>
@@ -1099,16 +1110,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/HeaderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/Label.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1122,18 +1123,6 @@
         <state relative-caret-position="184">
           <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1183#1184#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1152,6 +1141,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/domain/UserSetting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/domain/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-334">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/dao/CustomerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1505248082287" expanded="true" signature="1101:1140" ph="SELECT * FRO... Customer" />
+            <marker date="1505248082287" expanded="true" signature="1718:1770" ph="INSERT INTO Customer... " />
+            <marker date="1505248082287" expanded="true" signature="2609:2713" ph="UPDATE Custo... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/mpp.ssa.dao">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>mpp.ssa.dao</OriginalElement>
+          <nodes>
+            <node x="394.0" y="649.0">mpp.ssa.dao.UserDO</node>
+            <node x="2.5" y="97.0">mpp.ssa.dao.CustomerDAO</node>
+            <node x="248.0" y="281.0">mpp.ssa.dao.PromotionDAO</node>
+            <node x="0.0" y="557.0">mpp.ssa.dao.ProductDAO</node>
+            <node x="0.0" y="373.0">mpp.ssa.dao.UserSettingDO</node>
+            <node x="236.0" y="373.0">mpp.ssa.dao.DbConnection</node>
+            <node x="431.0" y="557.0">mpp.ssa.dao.ProductDO</node>
+            <node x="219.0" y="557.0">mpp.ssa.dao.LineItemDO</node>
+            <node x="291.0" y="189.0">mpp.ssa.dao.ProductCategoryDO</node>
+            <node x="0.0" y="281.0">mpp.ssa.dao.UserSettingDAO</node>
+            <node x="241.5" y="97.0">mpp.ssa.dao.UserDAO</node>
+            <node x="203.0" y="649.0">mpp.ssa.dao.OrderDO</node>
+            <node x="454.0" y="465.0">mpp.ssa.dao.CustomerDO</node>
+            <node x="0.0" y="189.0">mpp.ssa.dao.ProductCategoryDAO</node>
+            <node x="239.0" y="0.0">mpp.ssa.dao.IUserDAO</node>
+            <node x="0.0" y="649.0">mpp.ssa.dao.OrderDAO</node>
+            <node x="230.0" y="465.0">mpp.ssa.dao.LineItemDAO</node>
+            <node x="0.0" y="0.0">mpp.ssa.dao.ICustomerDAO</node>
+            <node x="0.0" y="465.0">mpp.ssa.dao.PromotionDO</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="mpp.ssa.dao.UserDAO" target="mpp.ssa.dao.IUserDAO">
+              <point x="0.0" y="-23.5" />
+              <point x="0.0" y="23.5" />
+            </edge>
+            <edge source="mpp.ssa.dao.CustomerDAO" target="mpp.ssa.dao.ICustomerDAO">
+              <point x="0.0" y="-23.5" />
+              <point x="0.0" y="23.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.7136871508379888" x="-357.7181996086106" y="286.2818003913894" />
+          <SelectedNodes>
+            <node>mpp.ssa.dao.ICustomerDAO</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/dao/ICustomerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/ProductDetailController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -1163,13 +1244,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/ListviewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+        <state relative-caret-position="-109">
+          <caret line="64" column="67" lean-forward="true" selection-start-line="64" selection-start-column="67" selection-end-line="64" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/header_home.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="10" column="97" lean-forward="false" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/header_user.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <marker date="1505257996922" expanded="true" signature="1216:1245" ph="..." />
+            <marker date="1505257996922" expanded="true" signature="1216:1231" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/HeaderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1183#1184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/login_screen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

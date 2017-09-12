@@ -60,6 +60,14 @@ public class Controller{
     void handleCheckLogin(ActionEvent event){
         USERNAME = UsernameField.getText().toString();
         PASSWORD = PasswordField.getText().toString();
+
+        System.out.print(USERNAME);
+        HeaderController headerController = new HeaderController();
+        headerController.changeHeaderUser();
+        headerController.labelUserName.setText(USERNAME);
+        Main.getRoot().setTop(headerController.Header);
+        Main.primaryStage.setScene(prviousScene);
+
     }
 
 
