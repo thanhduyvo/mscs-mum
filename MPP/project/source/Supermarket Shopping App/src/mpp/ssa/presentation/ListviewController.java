@@ -62,12 +62,14 @@ public class ListviewController extends Controller{
             listView.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    item = listView.getSelectionModel().getSelectedItem();
-                    ProductDetailController productDetailController = new ProductDetailController();
-                    productDetailController.createTilePane();
-                    productDetailController.labelName.setText(item.labelName);
-                    productDetailController.labelCost.setText(item.labelCost);
-                    Main.primaryStage.setScene(new Scene(productDetailController.anchorPane,600,400));
+                    if (event.getClickCount() == 2){
+                        item = listView.getSelectionModel().getSelectedItem();
+                        ProductDetailController productDetailController = new ProductDetailController();
+                        productDetailController.createTilePane();
+                        productDetailController.labelName.setText(item.labelName);
+                        productDetailController.labelCost.setText(item.labelCost);
+                        Main.primaryStage.setScene(new Scene(productDetailController.anchorPane,1000,700));
+                    }
                 }
             });
         }
