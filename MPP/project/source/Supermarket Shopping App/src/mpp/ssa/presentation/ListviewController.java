@@ -46,7 +46,7 @@ public class ListviewController extends Controller{
         }
     }
 
-    public void showProuct(){
+    public void showProduct(){
         Product a = new Product();
         a.setProductName("item A");
         a.setUnitCost(1234);

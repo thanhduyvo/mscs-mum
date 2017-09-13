@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.CheckoutScreenController">
+   <children>
+      <Text layoutX="276.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check out" wrappingWidth="202.205078125">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Button layoutX="629.0" layoutY="416.0" mnemonicParsing="false" text="Confirm" />
+      <Button layoutX="31.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
+      <Label layoutX="79.0" layoutY="113.0" text="Total Cost: ">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="185.0" text="Card Number: " />
+      <Label layoutX="79.0" layoutY="237.0" text="Shipping Address: " />
+      <Label layoutX="288.0" layoutY="125.0" prefHeight="27.0" prefWidth="117.0" text="\$0" />
+      <TextField layoutX="288.0" layoutY="179.0" promptText="XXX-XXXX-XXX-XXXX" />
+      <TextField layoutX="288.0" layoutY="237.0" />
+   </children>
+</AnchorPane>

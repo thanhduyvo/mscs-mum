@@ -45,4 +45,16 @@ public class HeaderController extends Controller{
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public void handleCart(ActionEvent event) {
+        prviousScene = Main.primaryStage.getScene();
+        AnchorPane Cart = new AnchorPane();
+
+        CartScreenController cartScreenController = new CartScreenController();
+        cartScreenController.createCartPane();
+        cartScreenController.showLineItem();
+        Main.primaryStage.setScene(new Scene(cartScreenController.CartPane,800,500));
+
+    }
 }

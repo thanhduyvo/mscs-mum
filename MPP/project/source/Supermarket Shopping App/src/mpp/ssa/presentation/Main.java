@@ -1,14 +1,8 @@
 package mpp.ssa.presentation;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -48,7 +42,7 @@ public class Main extends Application {
 
             ListviewController listviewController = new ListviewController();
             listviewController.createListPane();
-            listviewController.showProuct();
+            listviewController.showProduct();
             root.setCenter(listviewController.listView);
             primaryStage.show();
         } catch (IOException e) {
