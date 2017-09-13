@@ -41,6 +41,11 @@ public class Main extends Application {
             headerController.createHeader();
             root.setTop(headerController.Header);
 
+            CategoryController categoryController = new CategoryController();
+            categoryController.createCategory();
+            categoryController.showCategory();
+            root.setLeft(categoryController.Category);
+
             ListviewController listviewController = new ListviewController();
             listviewController.createListPane();
             listviewController.showProuct();
