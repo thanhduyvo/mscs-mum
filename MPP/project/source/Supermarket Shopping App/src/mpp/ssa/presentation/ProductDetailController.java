@@ -9,10 +9,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-/**
- * Created by Duong Truong on 9/12/2017.
- */
-public class ProductDetailHomeController extends HomeController {
+public class ProductDetailController extends HomeController {
     AnchorPane anchorPane = new AnchorPane();
     @FXML
     Label labelName;

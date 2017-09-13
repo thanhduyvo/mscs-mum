@@ -7,10 +7,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-/**
- * Created by Duong Truong on 9/12/2017.
- */
-public class CheckoutScreenHomeController extends HomeController {
+public class CheckoutController extends HomeController {
     AnchorPane CheckoutPane = new AnchorPane();
 
 

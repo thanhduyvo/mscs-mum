@@ -32,6 +32,7 @@ public class Main extends Application {
             primaryStage.setTitle("Shopping - MUM");
             primaryStage.setScene(new Scene(root, 1042, 635));
             HOME_SCENE = primaryStage.getScene();
+
             HomeController homeController = new HomeController();
             homeController.createHeader();
             root.setTop(homeController.Header);
@@ -43,6 +44,7 @@ public class Main extends Application {
             homeController.createListPane();
             homeController.showProduct();
             root.setCenter(homeController.productListView);
+
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();

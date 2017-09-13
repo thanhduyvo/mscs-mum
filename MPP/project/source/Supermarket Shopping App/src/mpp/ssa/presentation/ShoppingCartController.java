@@ -20,10 +20,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Duong Truong on 9/12/2017.
- */
-public class CartScreenHomeController extends HomeController {
+public class ShoppingCartController extends HomeController {
     AnchorPane CartPane = new AnchorPane();
 
     @FXML
@@ -73,7 +70,7 @@ public class CartScreenHomeController extends HomeController {
     @FXML
     public void handleCheckout(ActionEvent event){
         prviousScene = Main.primaryStage.getScene();
-        CheckoutScreenHomeController checkoutScreenController = new CheckoutScreenHomeController();
+        CheckoutController checkoutScreenController = new CheckoutController();
         checkoutScreenController.createCheckoutPane();
         checkoutScreenController.showCheckout();
         Main.primaryStage.setScene(new Scene(checkoutScreenController.CheckoutPane,800,500));

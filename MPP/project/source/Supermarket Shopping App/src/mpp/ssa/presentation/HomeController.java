@@ -34,7 +34,6 @@ public class HomeController {
     final AnchorPane PaneListview = Main.getPanelistView();
     public static Scene prviousScene = Main.primaryStage.getScene();
 
-
     static String USERNAME, PASSWORD;
     public static String getUsername(){
         return USERNAME;
@@ -110,6 +109,7 @@ public class HomeController {
     // HEADER
 
     AnchorPane Header = new AnchorPane();
+
     @FXML
     Label labelUserName;
 
@@ -147,7 +147,7 @@ public class HomeController {
         prviousScene = Main.primaryStage.getScene();
         AnchorPane Cart = new AnchorPane();
 
-        CartScreenHomeController cartScreenController = new CartScreenHomeController();
+        ShoppingCartController cartScreenController = new ShoppingCartController();
         cartScreenController.createCartPane();
         cartScreenController.showLineItem();
         Main.primaryStage.setScene(new Scene(cartScreenController.CartPane,800,500));
@@ -250,7 +250,7 @@ public class HomeController {
                 public void handle(MouseEvent event) {
                     if (event.getClickCount() == 2){
                         productItem = productListView.getSelectionModel().getSelectedItem();
-                        ProductDetailHomeController productDetailController = new ProductDetailHomeController();
+                        ProductDetailController productDetailController = new ProductDetailController();
                         productDetailController.createTilePane();
                         productDetailController.labelName.setText(productItem.labelName);
                         productDetailController.labelCost.setText(productItem.labelCost);
