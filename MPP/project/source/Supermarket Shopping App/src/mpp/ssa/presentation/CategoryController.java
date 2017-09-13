@@ -13,6 +13,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
+import mpp.ssa.bus.CustomerBUS;
+import mpp.ssa.bus.ProductBUS;
 import mpp.ssa.domain.Product;
 import mpp.ssa.domain.ProductCategory;
 
@@ -42,18 +44,16 @@ public class CategoryController extends Controller{
     }
 
     public void showCategory(){
-        ProductCategory a = new ProductCategory();
-        a.setCategoryName("Food");
+        List<ProductCategory> productCategories = getProductCategoryBUS().getAllProductCategories();
+        if(productCategories != null && !productCategories.isEmpty()) {
+            List<HBoxCell> list = new ArrayList<>();
+            for(ProductCategory category : productCategories) {
+                list.add(new HBoxCell(category));
+            }
 
-        ProductCategory b = new ProductCategory();
-        b.setCategoryName("Electronic");
-
-        List<HBoxCell> list = new ArrayList<>();
-        list.add(new HBoxCell(a));
-        list.add(new HBoxCell(b));
-
-        ObservableList<HBoxCell> myObservableList = FXCollections.observableList(list);
-        listView.setItems(myObservableList);
+            ObservableList<HBoxCell> myObservableList = FXCollections.observableList(list);
+            listView.setItems(myObservableList);
+        }
     }
 
     public static class HBoxCell extends HBox {
@@ -73,5 +73,7 @@ public class CategoryController extends Controller{
     }
 
     public void handleItemClick(MouseEvent mouseEvent) {
+
+
     }
 }

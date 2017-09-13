@@ -47,35 +47,31 @@ public class ListviewController extends Controller{
     }
 
     public void showProduct(){
-        Product a = new Product();
-        a.setProductName("item A");
-        a.setUnitCost(1234);
 
-        Product b = new Product();
-        b.setProductName("item B");
-        b.setUnitCost(4432);
+        List<Product> products = getProductBUS().getAllProducts();
+        if(products != null && !products.isEmpty()) {
 
-        List<HBoxCell> list = new ArrayList<>();
-        list.add(new HBoxCell(a));
-        list.add(new HBoxCell(b));
-
-        listView = new ListView<HBoxCell>();
-        ObservableList<HBoxCell> myObservableList = FXCollections.observableList(list);
-        listView.setItems(myObservableList);
-        listView.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                item = listView.getSelectionModel().getSelectedItem();
-                ProductDetailController productDetailController = new ProductDetailController();
-                productDetailController.createTilePane();
-                productDetailController.labelName.setText(item.labelName);
-                productDetailController.labelCost.setText(item.labelCost);
-                Main.primaryStage.setScene(new Scene(productDetailController.anchorPane,600,400));
+            List<HBoxCell> list = new ArrayList<>();
+            for(Product product : products) {
+                list.add(new HBoxCell(product));
             }
-        });
+
+            listView = new ListView<HBoxCell>();
+            ObservableList<HBoxCell> myObservableList = FXCollections.observableList(list);
+            listView.setItems(myObservableList);
+            listView.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    item = listView.getSelectionModel().getSelectedItem();
+                    ProductDetailController productDetailController = new ProductDetailController();
+                    productDetailController.createTilePane();
+                    productDetailController.labelName.setText(item.labelName);
+                    productDetailController.labelCost.setText(item.labelCost);
+                    Main.primaryStage.setScene(new Scene(productDetailController.anchorPane,600,400));
+                }
+            });
+        }
     }
-
-
 
     public static class HBoxCell extends HBox {
         Label name = new Label();
@@ -92,7 +88,7 @@ public class ListviewController extends Controller{
             HBox.setHgrow(name, Priority.ALWAYS);
 
             cost.setText(labelCost);
-            cost.setMaxWidth(Double.MAX_VALUE);
+            //cost.setMaxWidth(Double.MAX_VALUE);
             HBox.setHgrow(cost, Priority.ALWAYS);
 
             this.getChildren().addAll(name, cost);

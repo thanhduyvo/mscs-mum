@@ -12,6 +12,13 @@ public class Product {
         setProductCategory(new ProductCategory());
     }
 
+    public Product(int productId, String productName, double unitCost) {
+        setProductCategory(new ProductCategory());
+        setProductId(productId);
+        setProductName(productName);
+        setUnitCost(unitCost);
+    }
+
     private ProductCategory productCategory;
 
     private int productId;

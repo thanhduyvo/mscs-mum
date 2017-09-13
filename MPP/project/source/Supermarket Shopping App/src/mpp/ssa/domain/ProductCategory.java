@@ -11,6 +11,11 @@ public class ProductCategory {
     public ProductCategory() {
     }
 
+    public ProductCategory(int categoryId, String categoryName ) {
+        setCategoryId(categoryId);
+        setCategoryName(categoryName);
+    }
+
     private int categoryId;
 
     private String categoryName;

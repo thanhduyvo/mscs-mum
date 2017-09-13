@@ -7,5 +7,7 @@ public interface IProductBUS {
 
     Product getProductDetails(int id);
 
-    List<Product> getProductsByCategory(String category);
+    List<Product> getAllProducts();
+
+    List<Product> getProductsByCategory(int categoryId);
 }

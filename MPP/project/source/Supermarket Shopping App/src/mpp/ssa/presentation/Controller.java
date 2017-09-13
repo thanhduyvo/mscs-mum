@@ -17,6 +17,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import mpp.ssa.bus.ProductBUS;
+import mpp.ssa.bus.ProductCategoryBUS;
 import mpp.ssa.domain.*;
 import mpp.ssa.bus.CustomerBUS;
 
@@ -53,6 +55,24 @@ public class Controller{
         }
 
         return customerBUS;
+    }
+
+    private ProductCategoryBUS productCategoryBUS;
+    protected ProductCategoryBUS getProductCategoryBUS() {
+        if(productCategoryBUS == null) {
+            productCategoryBUS = new ProductCategoryBUS();
+        }
+
+        return productCategoryBUS;
+    }
+
+    private ProductBUS productBUS;
+    protected ProductBUS getProductBUS() {
+        if(productBUS == null) {
+            productBUS = new ProductBUS();
+        }
+
+        return productBUS;
     }
 
     @FXML
