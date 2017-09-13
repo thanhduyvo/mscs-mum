@@ -28,23 +28,21 @@ public class Main extends Application {
     public void start(Stage primaryStage){
         this.primaryStage = primaryStage;
         try {
-            root = FXMLLoader.load(getClass().getResource("home_screen.fxml"));
+            root = FXMLLoader.load(getClass().getResource("home.fxml"));
             primaryStage.setTitle("Shopping - MUM");
             primaryStage.setScene(new Scene(root, 1042, 635));
             HOME_SCENE = primaryStage.getScene();
-            HeaderController headerController = new HeaderController();
-            headerController.createHeader();
-            root.setTop(headerController.Header);
+            HomeController homeController = new HomeController();
+            homeController.createHeader();
+            root.setTop(homeController.Header);
 
-            CategoryController categoryController = new CategoryController();
-            categoryController.createCategory();
-            categoryController.showCategory();
-            root.setLeft(categoryController.Category);
+            homeController.createCategory();
+            homeController.showCategory();
+            root.setLeft(homeController.Category);
 
-            ListviewController listviewController = new ListviewController();
-            listviewController.createListPane();
-            listviewController.showProduct();
-            root.setCenter(listviewController.listView);
+            homeController.createListPane();
+            homeController.showProduct();
+            root.setCenter(homeController.productListView);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
