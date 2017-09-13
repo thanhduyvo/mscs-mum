@@ -183,7 +183,8 @@ public class HomeController {
             categoryListView.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    System.out.println(categoryListView.getSelectionModel().getSelectedItems().get(0).CategoryId);
+                    int categoryId = categoryListView.getSelectionModel().getSelectedItems().get(0).CategoryId;
+                    showProduct(categoryId);
                 }
             });
         }
@@ -232,9 +233,16 @@ public class HomeController {
         }
     }
 
-    public void showProduct(){
+    public void showProduct(int categoryId){
 
-        List<Product> products = getProductBUS().getAllProducts();
+        List<Product> products = new ArrayList<Product>();
+        if(categoryId == 0) {
+            products = getProductBUS().getAllProducts();
+        }
+        else {
+            products = getProductBUS().getProductsByCategory(categoryId);
+        }
+
         if(products != null && !products.isEmpty()) {
 
             List<ProductItemCell> list = new ArrayList<>();

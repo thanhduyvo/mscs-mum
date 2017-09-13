@@ -42,7 +42,7 @@ public class Main extends Application {
             root.setLeft(homeController.Category);
 
             homeController.createListPane();
-            homeController.showProduct();
+            homeController.showProduct(0);
             root.setCenter(homeController.productListView);
 
             primaryStage.show();
