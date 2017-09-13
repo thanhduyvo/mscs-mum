@@ -10,7 +10,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-
 import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 
@@ -19,6 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import mpp.ssa.domain.*;
+import mpp.ssa.bus.CustomerBUS;
 
 public class Controller{
     @FXML
@@ -46,6 +46,15 @@ public class Controller{
         prviousScene = Main.primaryStage.getScene();
     }
 
+    private CustomerBUS customerBUS;
+    private CustomerBUS getCustomerBUS() {
+        if(customerBUS == null) {
+            customerBUS = new CustomerBUS();
+        }
+
+        return customerBUS;
+    }
+
     @FXML
     void handleLogin(ActionEvent event){
 
@@ -58,18 +67,25 @@ public class Controller{
 
     @FXML
     void handleCheckLogin(ActionEvent event){
-        USERNAME = UsernameField.getText().toString();
-        PASSWORD = PasswordField.getText().toString();
+        USERNAME = UsernameField.getText();
+        PASSWORD = PasswordField.getText();
 
-        System.out.print(USERNAME);
-        HeaderController headerController = new HeaderController();
-        headerController.changeHeaderUser();
-        headerController.labelUserName.setText(USERNAME);
-        Main.getRoot().setTop(headerController.Header);
-        Main.primaryStage.setScene(prviousScene);
+        if(USERNAME != null && !USERNAME.isEmpty() && PASSWORD != null && !PASSWORD.isEmpty()) {
 
+            boolean loginResult = getCustomerBUS().login(USERNAME, PASSWORD);
+            if(loginResult) {
+                HeaderController headerController = new HeaderController();
+                headerController.changeHeaderUser();
+                headerController.labelUserName.setText(USERNAME);
+                Main.getRoot().setTop(headerController.Header);
+                Main.primaryStage.setScene(prviousScene);
+            }
+            else {
+                // implement: notify to user
+            }
+        }
+        else {
+            // implement: notify to user
+        }
     }
-
-
 }
-

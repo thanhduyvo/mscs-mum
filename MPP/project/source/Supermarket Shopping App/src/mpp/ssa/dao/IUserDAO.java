@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 public interface IUserDAO {
 
-    UserDO getUserByUsername(String username) throws SQLException;
+    UserDO getUserByUserNameAndPassword(String username, String password) throws SQLException;
 
     boolean insertUser(UserDO user) throws SQLException;
 

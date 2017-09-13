@@ -21,11 +21,12 @@ public class UserDAO implements IUserDAO {
     }
 
     @Override
-    public UserDO getUserByUsername(String username) throws SQLException {
+    public UserDO getUserByUserNameAndPassword(String username, String password) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM User WHERE username=?");
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM User WHERE username=? AND password=?");
             ps.setString(1, username);
+            ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
             if(rs.next())
             {

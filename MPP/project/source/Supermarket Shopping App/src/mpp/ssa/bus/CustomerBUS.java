@@ -19,9 +19,9 @@ public class CustomerBUS implements ICustomerBUS {
     public boolean login(String username, String password) {
 
         try {
-            UserDO user = userDAO.getUserByUsername(username.trim());
             String passwordHashString = SecurityHelper.hashMD5String(password.trim());
-            if(user != null && user.getPassword() == passwordHashString) {
+            UserDO user = userDAO.getUserByUserNameAndPassword(username.trim(), passwordHashString.toLowerCase());
+            if(user != null) {
                 return true;
             }
         } catch (SQLException ex) {
