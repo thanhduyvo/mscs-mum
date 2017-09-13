@@ -36,6 +36,7 @@ public class Controller{
     final AnchorPane PaneListview = Main.getPanelistView();
     public static Scene prviousScene = Main.primaryStage.getScene();
 
+
     static String USERNAME, PASSWORD;
     public static String getUsername(){
         return USERNAME;
@@ -107,5 +108,10 @@ public class Controller{
         else {
             // implement: notify to user
         }
+    }
+
+    @FXML
+    public void handleHome(ActionEvent event) {
+        Main.primaryStage.setScene(Main.HOME_SCENE);
     }
 }

@@ -53,15 +53,24 @@ public class CategoryController extends Controller{
 
             ObservableList<HBoxCell> myObservableList = FXCollections.observableList(list);
             listView.setItems(myObservableList);
+            listView.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    System.out.println(listView.getSelectionModel().getSelectedItems().get(0).CategoryId);
+                }
+            });
         }
     }
 
     public static class HBoxCell extends HBox {
         Label name = new Label();
         String labelName;
+        Integer CategoryId;
 
         HBoxCell(ProductCategory category) {
             super();
+
+            CategoryId = category.getCategoryId();
 
             labelName = category.getCategoryName();
             name.setText(labelName);

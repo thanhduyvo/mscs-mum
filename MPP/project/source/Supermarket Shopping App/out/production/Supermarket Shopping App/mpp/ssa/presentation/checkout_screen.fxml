@@ -39,5 +39,6 @@
       <Label layoutX="631.0" layoutY="137.0" prefHeight="27.0" prefWidth="160.0" text="Address" />
       <Label layoutX="631.0" layoutY="173.0" prefHeight="27.0" prefWidth="160.0" text="Email" />
       <Label layoutX="629.0" layoutY="212.0" prefHeight="27.0" prefWidth="160.0" text="Phone" />
+      <Button layoutX="672.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleHome" text="Home" />
    </children>
 </AnchorPane>

@@ -21,6 +21,7 @@ public class Main extends Application {
     public static AnchorPane PanelistView = new AnchorPane();
 
     public static AnchorPane getPanelistView(){ return PanelistView;}
+    public static Scene HOME_SCENE;
 
 
     @Override
@@ -30,7 +31,7 @@ public class Main extends Application {
             root = FXMLLoader.load(getClass().getResource("home_screen.fxml"));
             primaryStage.setTitle("Shopping - MUM");
             primaryStage.setScene(new Scene(root, 1042, 635));
-
+            HOME_SCENE = primaryStage.getScene();
             HeaderController headerController = new HeaderController();
             headerController.createHeader();
             root.setTop(headerController.Header);
