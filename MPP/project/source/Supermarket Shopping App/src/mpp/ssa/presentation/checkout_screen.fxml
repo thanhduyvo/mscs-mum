@@ -37,5 +37,7 @@
       <Label layoutX="478.0" layoutY="212.0" text="Phone:" />
       <Label layoutX="631.0" layoutY="96.0" prefHeight="27.0" prefWidth="160.0" text="Name" />
       <Label layoutX="631.0" layoutY="137.0" prefHeight="27.0" prefWidth="160.0" text="Address" />
+      <Label layoutX="631.0" layoutY="173.0" prefHeight="27.0" prefWidth="160.0" text="Email" />
+      <Label layoutX="629.0" layoutY="212.0" prefHeight="27.0" prefWidth="160.0" text="Phone" />
    </children>
 </AnchorPane>

@@ -20,6 +20,8 @@ public class ProductDetailController extends Controller{
     Label labelName;
     @FXML
     Label labelCost;
+    @FXML
+    private ComboBox comboBox;
 
     @FXML
     public void handleBackBtn2(ActionEvent event){
@@ -39,5 +41,8 @@ public class ProductDetailController extends Controller{
         }
     }
 
-
+    @FXML
+    public void handleAddToCart(ActionEvent event) {
+        System.out.println(comboBox.getValue().toString());
+    }
 }
