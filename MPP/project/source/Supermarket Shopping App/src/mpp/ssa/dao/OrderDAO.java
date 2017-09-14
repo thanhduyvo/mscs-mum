@@ -29,6 +29,26 @@ public class OrderDAO implements IOrderDAO {
     }
 
     @Override
+    public OrderDO getOrder(int id) throws SQLException {
+        Connection connection = dbConnection.getConnection();
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM Order WHERE id=?");
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next())
+            {
+                return extractOrderFromResultSet(rs);
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            connection.close();
+        }
+
+        return null;
+    }
+
+    @Override
     public List<OrderDO> getOrdersByCustomer(int customerId) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {

@@ -1,5 +1,6 @@
 package mpp.ssa.bus;
 
+import mpp.ssa.dao.LineItemDAO;
 import mpp.ssa.dao.OrderDAO;
 import mpp.ssa.dao.OrderDO;
 import mpp.ssa.dao.ProductDO;
@@ -17,9 +18,11 @@ import java.util.List;
 public class OrderBUS implements IOrderBUS {
 
     private OrderDAO orderDAO;
+    private LineItemDAO lineItemDAO;
 
     private OrderBUS() {
         orderDAO = new OrderDAO();
+        lineItemDAO = new LineItemDAO();
     }
 
     private static OrderBUS orderBUS;
@@ -36,13 +39,16 @@ public class OrderBUS implements IOrderBUS {
     public boolean placeOrder(Order order) {
 
         try {
-            return orderDAO.insertOrder(new OrderDO(order.getCustomer().getCustomerId(),
+            boolean retValue = orderDAO.insertOrder(new OrderDO(order.getCustomer().getCustomerId(),
                     order.getDateCreated().toString(),
                     order.getDateShipped().toString(),
                     order.getStatus(),
                     order.getBankCardNo(),
                     order.getShippingAddress(),
                     order.getShippingCost()));
+            if(retValue) {
+
+            }
         } catch (SQLException ex) {
         }
 

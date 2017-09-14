@@ -12,13 +12,11 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 
+import mpp.ssa.bus.OrderBUS;
 import mpp.ssa.bus.ProductBUS;
 import mpp.ssa.bus.ProductCategoryBUS;
 import mpp.ssa.bus.CustomerBUS;
-import mpp.ssa.domain.Customer;
-import mpp.ssa.domain.Product;
-import mpp.ssa.domain.ProductCategory;
-import mpp.ssa.domain.Standard;
+import mpp.ssa.domain.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -91,6 +89,10 @@ public class HomeController {
                 customer.setLoginStatus(true);
                 customer.setUserType(new Standard());
                 customer.setShoppingCart(Main.userData.getCustomer().getShoppingCart());
+
+                // get customer's orders
+                List<Order> orders = OrderBUS.getOrderBUS().getOrdersByCustomer(customer.getCustomerId());
+                customer.setOrderList(orders);
                 Main.userData.setCustomer(customer);
             }
             else {
