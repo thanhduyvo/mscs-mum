@@ -23,12 +23,4 @@ public class CheckoutController extends HomeController {
     public void showCheckout(){
 
     }
-
-    @FXML
-    public void handleBack(ActionEvent event) {
-        Main.primaryStage.setScene(prviousScene);
-    }
-
-
-
 }

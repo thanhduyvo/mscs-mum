@@ -39,5 +39,6 @@ public class ProductDetailController extends HomeController {
     @FXML
     public void handleAddToCart(ActionEvent event) {
         System.out.println(comboBox.getValue().toString());
+
     }
 }

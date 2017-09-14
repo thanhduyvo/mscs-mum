@@ -15,7 +15,7 @@
          </font>
       </Text>
       <Button layoutX="629.0" layoutY="416.0" mnemonicParsing="false" text="Confirm" />
-      <Button layoutX="31.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
+      <Button layoutX="31.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back" />
       <Label layoutX="86.0" layoutY="186.0" text="Total Cost: ">
          <font>
             <Font size="34.0" />

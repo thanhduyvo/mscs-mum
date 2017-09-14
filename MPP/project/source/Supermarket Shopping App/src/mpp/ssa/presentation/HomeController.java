@@ -185,6 +185,8 @@ public class HomeController {
                 public void handle(MouseEvent event) {
                     int categoryId = categoryListView.getSelectionModel().getSelectedItems().get(0).CategoryId;
                     showProduct(categoryId);
+                    Main.getRoot().setCenter(productListView);
+                    Main.primaryStage.setScene(Main.HOME_SCENE);
                 }
             });
         }
