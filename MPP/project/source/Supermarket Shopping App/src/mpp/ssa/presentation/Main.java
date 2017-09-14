@@ -30,6 +30,7 @@ public class Main extends Application {
     public void start(Stage primaryStage){
         this.primaryStage = primaryStage;
         try {
+
             root = FXMLLoader.load(getClass().getResource("home.fxml"));
             primaryStage.setTitle("Shopping - MUM");
             primaryStage.setScene(new Scene(root, 1042, 635));

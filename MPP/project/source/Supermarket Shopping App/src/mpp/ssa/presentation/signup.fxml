@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.SignupController">
+   <children>
+      <Text layoutX="320.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up" wrappingWidth="160.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Button layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back" />
+      <Label layoutX="40.0" layoutY="256.0" text="Card Number: " />
+      <Label layoutX="40.0" layoutY="308.0" text="Shipping Address: " />
+      <TextField fx:id="txtCardNumber" layoutX="249.0" layoutY="250.0" promptText="XXX-XXXX-XXX-XXXX" />
+      <TextField fx:id="txtShippingAddress" layoutX="249.0" layoutY="308.0" />
+      <Label layoutX="62.0" layoutY="97.0" text="Login Name: " />
+      <Label layoutX="465.0" layoutY="86.0" text="Address: " />
+      <Label layoutX="465.0" layoutY="136.0" text="Email: " />
+      <Label layoutX="464.0" layoutY="188.0" text="Phone:" />
+      <Button layoutX="690.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleHome" text="Home" />
+      <Text layoutX="62.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+      <TextField fx:id="txtName" layoutX="186.0" layoutY="91.0">
+         <tooltip>
+            <Tooltip text="This is your Login ID" />
+         </tooltip></TextField>
+      <PasswordField fx:id="passPassword" layoutX="186.0" layoutY="137.0" />
+      <TextField fx:id="txtAddress" layoutX="560.0" layoutY="80.0" />
+      <TextField fx:id="txtEmail" layoutX="560.0" layoutY="130.0" />
+      <TextField fx:id="txtPhone" layoutX="560.0" layoutY="188.0" />
+      <Button layoutX="651.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleConfirmBtn" text="Confirm" />
+      <Text layoutX="565.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="After Sign up successfully, you have to Login" wrappingWidth="214.2236328125" />
+   </children>
+</AnchorPane>

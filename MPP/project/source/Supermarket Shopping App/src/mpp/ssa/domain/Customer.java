@@ -16,6 +16,7 @@ public class Customer extends User {
         setOrderList(new ArrayList<Order>());
         setShoppingCart(new ShoppingCart());
         setCustomerName(customerName);
+        setAddress(address);
         setEmail(email);
         setBankCardNo(bankCardNo);
         setShippingAddress(shippingAddress);
