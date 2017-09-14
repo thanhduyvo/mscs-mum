@@ -36,7 +36,6 @@ public class ProductCategoryBUS implements IProductCategoryBUS {
             List<ProductCategoryDO> productCategoryDOList = productCategoryDAO.getAllProductCategories();
             if(productCategoryDOList != null) {
                 List<ProductCategory> productCategories = new ArrayList<ProductCategory>();
-                productCategories.add(new ProductCategory(0, "All"));
                 for(ProductCategoryDO productCategoryDO : productCategoryDOList) {
                     productCategories.add(new ProductCategory(productCategoryDO.getId(), productCategoryDO.getCategoryName()));
                 }
