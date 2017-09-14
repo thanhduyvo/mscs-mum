@@ -45,7 +45,7 @@ public class UserDAO implements IUserDAO {
     public boolean insertUser(UserDO user) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO User VALUES (NULL, ?, ?, ?)");
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO User VALUES (?, ?, ?)");
             ps.setString(1, user.getUsername());
             ps.setString(2, user.getPassword());
             ps.setString(3, user.getUserType());

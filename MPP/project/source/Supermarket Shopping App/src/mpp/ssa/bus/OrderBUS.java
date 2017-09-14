@@ -7,7 +7,11 @@ import mpp.ssa.domain.Order;
 import mpp.ssa.domain.Product;
 
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class OrderBUS implements IOrderBUS {
@@ -50,12 +54,22 @@ public class OrderBUS implements IOrderBUS {
         try {
             List<OrderDO> orderDOList = orderDAO.getOrdersByCustomer(customerId);
             if(orderDOList != null) {
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
                 List<Order> orders = new ArrayList<Order>();
                 for(OrderDO orderDO : orderDOList) {
-                    //orders.add(new Order(productDO.getId(), productDO.getProductName(), productDO.getUnitCost()));
+                    Date dateCreated = df.parse(orderDO.getDateCreated());
+                    Date dateShipped = df.parse(orderDO.getDateShipped());
+                    orders.add(new Order(orderDO.getId(),
+                            dateCreated,
+                            dateShipped,
+                            orderDO.getStatus(),
+                            orderDO.getBankCardNo(),
+                            orderDO.getShippingAddress(),
+                            orderDO.getShippingCost()));
                 }
                 return orders;
             }
+        } catch (ParseException ex) {
         } catch (SQLException ex) {
         }
 
