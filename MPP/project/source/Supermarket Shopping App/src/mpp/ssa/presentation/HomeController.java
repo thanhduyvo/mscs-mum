@@ -15,10 +15,7 @@ import javafx.scene.layout.*;
 import mpp.ssa.bus.ProductBUS;
 import mpp.ssa.bus.ProductCategoryBUS;
 import mpp.ssa.bus.CustomerBUS;
-import mpp.ssa.domain.Customer;
-import mpp.ssa.domain.Product;
-import mpp.ssa.domain.ProductCategory;
-import mpp.ssa.domain.Standard;
+import mpp.ssa.domain.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -71,7 +68,7 @@ public class HomeController {
                 customer.setUsername(USERNAME);
                 customer.setLoginStatus(true);
                 customer.setUserType(new Standard());
-
+                customer.setShoppingCart(Main.userData.getCustomer().getShoppingCart());
                 Main.userData.setCustomer(customer);
             }
             else {
