@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5c11ef9-8163-4d34-a127-ee71e970ae97" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ssa.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/bus/ProductCategoryBUS.class" afterPath="$PROJECT_DIR$/out/production/Supermarket Shopping App/mpp/ssa/bus/ProductCategoryBUS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.properties" afterPath="$PROJECT_DIR$/config.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/shoppingCart.fxml" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/shoppingCart.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,23 +38,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="244" column="33" lean-forward="false" selection-start-line="244" selection-start-column="33" selection-end-line="244" selection-end-column="33" />
+            <state relative-caret-position="146">
+              <caret line="106" column="44" lean-forward="true" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
               <folding>
-                <element signature="e#6385#6394#0" expanded="true" />
+                <element signature="e#6214#6223#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
+            <state relative-caret-position="50">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,6 +125,11 @@
             <state relative-caret-position="525">
               <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="24" />
               <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#285#286#0" expanded="false" />
+                <element signature="e#324#325#0" expanded="false" />
+                <element signature="e#1050#1051#0" expanded="false" />
+                <element signature="e#1077#1078#0" expanded="false" />
                 <marker date="1505356962411" expanded="true" signature="538:544" ph=" }" />
               </folding>
             </state>
@@ -205,8 +208,8 @@
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/ShoppingCartController.java" />
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/CheckoutController.java" />
         <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/headerUser.fxml" />
-        <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java" />
         <option value="$PROJECT_DIR$/config.properties" />
+        <option value="$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java" />
       </list>
     </option>
   </component>
@@ -265,6 +268,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Supermarket Shopping App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Supermarket Shopping App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Supermarket Shopping App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Supermarket Shopping App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bus" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -745,12 +784,12 @@
       <workItem from="1505331578667" duration="254000" />
       <workItem from="1505332002918" duration="542000" />
       <workItem from="1505351241881" duration="6296000" />
-      <workItem from="1505360296684" duration="169000" />
+      <workItem from="1505360296684" duration="548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46726000" />
+    <option name="totallyTimeSpent" value="47105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -1022,6 +1061,11 @@
         <state relative-caret-position="525">
           <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="24" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#285#286#0" expanded="false" />
+            <element signature="e#324#325#0" expanded="false" />
+            <element signature="e#1050#1051#0" expanded="false" />
+            <element signature="e#1077#1078#0" expanded="false" />
             <marker date="1505356962411" expanded="true" signature="538:544" ph=" }" />
           </folding>
         </state>
@@ -1086,21 +1130,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java">
+    <entry file="file://$PROJECT_DIR$/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="244" column="33" lean-forward="false" selection-start-line="244" selection-start-column="33" selection-end-line="244" selection-end-column="33" />
-          <folding>
-            <element signature="e#6385#6394#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="50">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.properties">
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="146">
+          <caret line="106" column="44" lean-forward="true" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+          <folding>
+            <element signature="e#6214#6223#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

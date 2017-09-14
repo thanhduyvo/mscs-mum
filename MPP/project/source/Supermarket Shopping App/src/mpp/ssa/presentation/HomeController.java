@@ -193,9 +193,6 @@ public class HomeController {
 
     @FXML
     public void handleItemClick(MouseEvent mouseEvent) {
-        productItems = productListView.getSelectionModel().getSelectedItems();
-        productItem = productItems.get(0);
-        System.out.print(productItem.labelName);
     }
 
     public void createListPane(){
@@ -239,6 +236,7 @@ public class HomeController {
                 }
             });
     }
+
 
     public static class ProductItemCell extends HBox {
         Label name = new Label();

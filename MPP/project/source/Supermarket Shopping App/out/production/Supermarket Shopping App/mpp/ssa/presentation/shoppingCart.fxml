@@ -18,7 +18,7 @@
       <Label layoutX="214.0" layoutY="101.0" text="Quantity" AnchorPane.leftAnchor="214.0" AnchorPane.topAnchor="101.0" />
       <Label layoutX="448.0" layoutY="101.0" text="Total Cost" AnchorPane.bottomAnchor="372.0" AnchorPane.rightAnchor="272.0" AnchorPane.topAnchor="101.0" />
       <Button layoutX="629.0" layoutY="416.0" mnemonicParsing="false" onAction="#handleCheckout" text="Check out" />
-      <Button layoutX="31.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back" />
+      <Button layoutX="31.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleHome" text="Back" />
       <Button layoutX="681.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleHome" text="Home" />
    </children>
 </AnchorPane>
