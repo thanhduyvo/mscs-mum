@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5c11ef9-8163-4d34-a127-ee71e970ae97" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ssa.db" afterPath="$PROJECT_DIR$/ssa.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/shoppingCart.fxml" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/shoppingCart.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,8 +41,8 @@
       <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="106" column="44" lean-forward="true" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+            <state relative-caret-position="171">
+              <caret line="209" column="67" lean-forward="true" selection-start-line="209" selection-start-column="67" selection-end-line="209" selection-end-column="67" />
               <folding>
                 <element signature="e#6214#6223#0" expanded="true" />
               </folding>
@@ -784,12 +784,12 @@
       <workItem from="1505331578667" duration="254000" />
       <workItem from="1505332002918" duration="542000" />
       <workItem from="1505351241881" duration="6296000" />
-      <workItem from="1505360296684" duration="548000" />
+      <workItem from="1505360296684" duration="1023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47105000" />
+    <option name="totallyTimeSpent" value="47580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -1140,8 +1140,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="106" column="44" lean-forward="true" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+        <state relative-caret-position="171">
+          <caret line="209" column="67" lean-forward="true" selection-start-line="209" selection-start-column="67" selection-end-line="209" selection-end-column="67" />
           <folding>
             <element signature="e#6214#6223#0" expanded="true" />
           </folding>

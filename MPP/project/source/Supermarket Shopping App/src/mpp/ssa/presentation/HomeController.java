@@ -206,7 +206,7 @@ public class HomeController {
     public void showProduct(int categoryId){
 
         List<Product> products = new ArrayList<Product>();
-        if(categoryId == 0) {
+        if(categoryId == 1 || categoryId == 0) {
             products = ProductBUS.getProductBUS().getAllProducts();
         }
         else {
