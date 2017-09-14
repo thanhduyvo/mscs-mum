@@ -234,7 +234,7 @@ public class HomeController {
                         productDetailController.createTilePane();
                         productDetailController.labelName.setText(productItem.labelName);
                         productDetailController.labelCost.setText(productItem.labelCost);
-                        Main.primaryStage.setScene(new Scene(productDetailController.anchorPane,1000,700));
+                        Main.primaryStage.setScene(new Scene(productDetailController.anchorPane,700,400));
                     }
                 }
             });

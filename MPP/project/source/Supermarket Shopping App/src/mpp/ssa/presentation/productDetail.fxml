@@ -8,26 +8,26 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.FXCollections?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.ProductDetailController">
+<AnchorPane maxHeight="400.0" maxWidth="700.0" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.ProductDetailController">
    <children>
-      <Text layoutX="24.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME: ">
+      <Text layoutX="52.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" AnchorPane.leftAnchor="52.0">
          <font>
             <Font size="25.0" />
          </font>
       </Text>
-      <Label fx:id="labelName" layoutX="147.0" layoutY="84.0" prefHeight="246.0" prefWidth="754.0" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="labelName" layoutX="165.0" layoutY="118.0" prefHeight="55.0" prefWidth="502.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="165.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="labelCost" layoutX="131.0" layoutY="350.0" prefHeight="35.0" prefWidth="126.0" textAlignment="CENTER" wrapText="true" />
-      <Text layoutX="38.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price: ">
+      <Label fx:id="labelCost" layoutX="165.0" layoutY="191.0" prefHeight="35.0" prefWidth="126.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="165.0" />
+      <Text layoutX="53.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price: " AnchorPane.leftAnchor="53.0">
          <font>
             <Font size="26.0" />
          </font>
       </Text>
       <Button layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackBtn2" text="Back" />
-      <ComboBox fx:id="comboBox" layoutX="429.0" layoutY="572.0" prefHeight="39.0" prefWidth="76.0" promptText="Quantity:">
+      <ComboBox fx:id="comboBox" layoutX="291.0" layoutY="332.0" prefHeight="20.0" prefWidth="40.0" promptText="Quantity:" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="291.0">
       <items>
          <FXCollections fx:factory="observableArrayList">
             <String fx:value="1" />
@@ -47,8 +47,8 @@
          </value>
       </ComboBox>
 
-      <Button layoutX="551.0" layoutY="572.0" mnemonicParsing="false" onAction="#handleAddToCart" text="Add to Cart" />
-      <Label layoutX="334.0" layoutY="578.0" text="Quantity:" />
-      <Button layoutX="840.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleHome" text="Home" />
+                  <Button layoutX="387.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleAddToCart" text="Add to Cart" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="387.0" />
+      <Label layoutX="212.0" layoutY="315.0" text="Quantity:" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="212.0" />
+      <Button layoutX="618.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleHome" text="Home" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="14.0" />
    </children>
 </AnchorPane>
