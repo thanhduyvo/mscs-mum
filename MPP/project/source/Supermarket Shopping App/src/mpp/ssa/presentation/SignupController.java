@@ -34,6 +34,8 @@ public class SignupController extends HomeController {
 
     @FXML
     private TextField txtEmail;
+    @FXML
+    private TextField txtCustomerName;
 
     private Customer customer = new Customer();
 
@@ -53,6 +55,7 @@ public class SignupController extends HomeController {
         txtEmail = (TextField) SignupPane.lookup("#txtEmail");
         txtName = (TextField) SignupPane.lookup("#txtName");
         txtPhone = (TextField) SignupPane.lookup("#txtPhone");
+        txtCustomerName = (TextField) SignupPane.lookup("#txtCustomerName");
         txtShippingAddress = (TextField) SignupPane.lookup("#txtShippingAddress");
     }
 
@@ -66,8 +69,9 @@ public class SignupController extends HomeController {
     public void saveCustomer(){
         customer.setAddress(txtAddress.getText());
         customer.setBankCardNo(txtCardNumber.getText());
-        customer.setCustomerName(txtName.getText());
+        customer.setUsername(txtName.getText());
         customer.setPassword(passPassword.getText());
+        customer.setCustomerName(txtCustomerName.getText());
         customer.setEmail(txtEmail.getText());
         customer.setShippingAddress(txtShippingAddress.getText());
     }

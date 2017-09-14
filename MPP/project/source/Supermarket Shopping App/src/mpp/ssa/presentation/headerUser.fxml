@@ -27,5 +27,6 @@
             <Image url="@images.png" />
          </image>
       </ImageView>
+      <Button layoutX="139.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleOrderBtn" text="Order History" />
    </children>
 </AnchorPane>

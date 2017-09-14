@@ -57,7 +57,17 @@ public class HomeController {
         setPrviousScene();
         SignupController signupController = new SignupController();
         signupController.createSignupPane();
-        Main.primaryStage.setScene(new Scene(signupController.SignupPane,800,400));
+        Main.primaryStage.setScene(new Scene(signupController.SignupPane,838,455));
+    }
+
+    @FXML
+    public void handleOrderBtn(ActionEvent event){
+        OrderController orderController = new OrderController();
+        orderController.createOrderPane();
+        orderController.showOrderHistory();
+
+        Main.primaryStage.setScene(new Scene(orderController.OrderPane,850,560));
+
     }
 
     @FXML
