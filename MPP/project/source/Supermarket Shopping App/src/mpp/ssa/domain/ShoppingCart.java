@@ -33,6 +33,7 @@ public class ShoppingCart {
         }
 
         if(!isExisted) {
+            item.setSubtotal(Math.round(item.getSubtotal() * 100) / 100);
             lineItemList.add(item);
         }
 

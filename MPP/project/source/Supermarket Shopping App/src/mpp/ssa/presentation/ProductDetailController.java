@@ -44,6 +44,6 @@ public class ProductDetailController extends HomeController {
         ShoppingCart shoppingCart = Main.userData.getCustomer().getShoppingCart();
         int quantity = Integer.parseInt(comboBox.getValue().toString());
         shoppingCart.addCartItem(new LineItem(productItem.ProductId, productItem.labelName,
-                quantity, productItem.UnitCost, Math.round(quantity * productItem.UnitCost * 100)/100));
+                quantity, productItem.UnitCost, quantity * productItem.UnitCost));
     }
 }
