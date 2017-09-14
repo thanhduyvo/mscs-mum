@@ -44,33 +44,6 @@ public class HomeController {
         prviousScene = Main.primaryStage.getScene();
     }
 
-    private CustomerBUS customerBUS;
-    public CustomerBUS getCustomerBUS() {
-        if(customerBUS == null) {
-            customerBUS = new CustomerBUS();
-        }
-
-        return customerBUS;
-    }
-
-    private ProductCategoryBUS productCategoryBUS;
-    public ProductCategoryBUS getProductCategoryBUS() {
-        if(productCategoryBUS == null) {
-            productCategoryBUS = new ProductCategoryBUS();
-        }
-
-        return productCategoryBUS;
-    }
-
-    private ProductBUS productBUS;
-    public ProductBUS getProductBUS() {
-        if(productBUS == null) {
-            productBUS = new ProductBUS();
-        }
-
-        return productBUS;
-    }
-
     @FXML
     public void handleBackBtn(ActionEvent event){
         Main.primaryStage.setScene(prviousScene);
@@ -83,7 +56,7 @@ public class HomeController {
 
         if(USERNAME != null && !USERNAME.isEmpty() && PASSWORD != null && !PASSWORD.isEmpty()) {
 
-            boolean loginResult = getCustomerBUS().login(USERNAME, PASSWORD);
+            boolean loginResult = CustomerBUS.getCustomerBUS().login(USERNAME, PASSWORD);
             if(loginResult) {
                 changeHeaderUser();
                 labelUserName.setText(USERNAME);
@@ -169,7 +142,7 @@ public class HomeController {
     }
 
     public void showCategory(){
-        List<ProductCategory> productCategories = getProductCategoryBUS().getAllProductCategories();
+        List<ProductCategory> productCategories = ProductCategoryBUS.getProductCategoryBUS().getAllProductCategories();
         if(productCategories != null && !productCategories.isEmpty()) {
             List<CategoryItemCell> list = new ArrayList<>();
             for(ProductCategory category : productCategories) {
@@ -237,10 +210,10 @@ public class HomeController {
 
         List<Product> products = new ArrayList<Product>();
         if(categoryId == 0) {
-            products = getProductBUS().getAllProducts();
+            products = ProductBUS.getProductBUS().getAllProducts();
         }
         else {
-            products = getProductBUS().getProductsByCategory(categoryId);
+            products = ProductBUS.getProductBUS().getProductsByCategory(categoryId);
         }
         List<ProductItemCell> list = new ArrayList<>();
         if(products != null && !products.isEmpty()) {

@@ -14,8 +14,18 @@ public class ProductBUS implements IProductBUS {
 
     private ProductDAO productDAO;
 
-    public ProductBUS() {
+    private ProductBUS() {
         productDAO = new ProductDAO();
+    }
+
+    private static ProductBUS productBUS;
+
+    public static ProductBUS getProductBUS() {
+        if(productBUS == null) {
+            productBUS = new ProductBUS();
+        }
+
+        return productBUS;
     }
 
     @Override

@@ -11,8 +11,18 @@ public class CustomerBUS implements ICustomerBUS {
 
     private UserDAO userDAO;
 
-    public CustomerBUS() {
+    private CustomerBUS() {
         userDAO = new UserDAO();
+    }
+
+    private static CustomerBUS customerBUS;
+
+    public static CustomerBUS getCustomerBUS() {
+        if(customerBUS == null) {
+            customerBUS = new CustomerBUS();
+        }
+
+        return customerBUS;
     }
 
     @Override

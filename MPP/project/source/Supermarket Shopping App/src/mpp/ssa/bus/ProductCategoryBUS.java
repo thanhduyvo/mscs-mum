@@ -15,8 +15,18 @@ public class ProductCategoryBUS implements IProductCategoryBUS {
 
     private ProductCategoryDAO productCategoryDAO;
 
-    public ProductCategoryBUS() {
+    private ProductCategoryBUS() {
         productCategoryDAO = new ProductCategoryDAO();
+    }
+
+    private static ProductCategoryBUS productCategoryBUS;
+
+    public static ProductCategoryBUS getProductCategoryBUS() {
+        if(productCategoryBUS == null) {
+            productCategoryBUS = new ProductCategoryBUS();
+        }
+
+        return productCategoryBUS;
     }
 
     @Override
