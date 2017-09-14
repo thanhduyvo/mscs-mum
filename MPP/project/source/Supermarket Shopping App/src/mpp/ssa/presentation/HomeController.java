@@ -80,7 +80,7 @@ public class HomeController {
                 customer.setUsername(USERNAME);
                 customer.setLoginStatus(true);
                 customer.setUserType(new Standard());
-
+                customer.setShoppingCart(Main.userData.getCustomer().getShoppingCart());
                 Main.userData.setCustomer(customer);
             }
             else {

@@ -2,9 +2,18 @@ package mpp.ssa.dao;
 
 public class OrderDO {
 
+    public OrderDO() {
+    }
+
     public OrderDO(int customerId, String dateCreated, String dateShipped,
                    String status, String bankCardNo, String shippingAddress, double shippingCost) {
-
+        setCustomerId(customerId);
+        setDateCreated(dateCreated);
+        setDateShipped(dateShipped);
+        setStatus(status);
+        setBankCardNo(bankCardNo);
+        setShippingAddress(shippingAddress);
+        setShippingCost(shippingCost);
     }
 
     private int id;

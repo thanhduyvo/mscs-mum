@@ -2,9 +2,13 @@ package mpp.ssa.bus;
 
 import mpp.ssa.dao.OrderDAO;
 import mpp.ssa.dao.OrderDO;
+import mpp.ssa.dao.ProductDO;
 import mpp.ssa.domain.Order;
+import mpp.ssa.domain.Product;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class OrderBUS implements IOrderBUS {
 
@@ -39,5 +43,22 @@ public class OrderBUS implements IOrderBUS {
         }
 
         return false;
+    }
+
+    @Override
+    public List<Order> getOrdersByCustomer(int customerId) {
+        try {
+            List<OrderDO> orderDOList = orderDAO.getOrdersByCustomer(customerId);
+            if(orderDOList != null) {
+                List<Order> orders = new ArrayList<Order>();
+                for(OrderDO orderDO : orderDOList) {
+                    //orders.add(new Order(productDO.getId(), productDO.getProductName(), productDO.getUnitCost()));
+                }
+                return orders;
+            }
+        } catch (SQLException ex) {
+        }
+
+        return null;
     }
 }

@@ -14,6 +14,17 @@ public class Order {
         setLineItemList(new ArrayList<LineItem>());
     }
 
+    public Order(int orderId, Date dateCreated, Date dateShipped,
+                 String status, String bankCardNo, String shippingAddress, double shippingCost) {
+        setOrderId(orderId);
+        setDateCreated(dateCreated);
+        setDateShipped(dateShipped);
+        setStatus(status);
+        setBankCardNo(bankCardNo);
+        setShippingAddress(shippingAddress);
+        setShippingCost(shippingCost);
+    }
+
     private Customer customer;
 
     private List<LineItem> lineItemList;
