@@ -62,10 +62,21 @@ public class ShoppingCartController extends HomeController {
 
     @FXML
     public void handleCheckout(ActionEvent event){
-        prviousScene = Main.primaryStage.getScene();
-        CheckoutController checkoutScreenController = new CheckoutController();
-        checkoutScreenController.createCheckoutPane();
-        Main.primaryStage.setScene(new Scene(checkoutScreenController.CheckoutPane,800,500));
+        ShoppingCart shoppingCart = Main.userData.getCustomer().getShoppingCart();
+        if(shoppingCart.getLineItemList().size() == 0) {
+            return;
+        }
+
+        if(Main.userData.getCustomer().isLoginStatus()){
+            prviousScene = Main.primaryStage.getScene();
+            CheckoutController checkoutScreenController = new CheckoutController();
+            checkoutScreenController.createCheckoutPane();
+            Main.primaryStage.setScene(new Scene(checkoutScreenController.CheckoutPane,800,500));
+        }
+        else {
+            implementLogin();
+        }
+
     }
 
     public static class HBoxCell extends HBox {

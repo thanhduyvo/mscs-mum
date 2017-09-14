@@ -112,8 +112,7 @@ public class HomeController {
         }
     }
 
-    @FXML
-    public void handleLogin(ActionEvent event) {
+    public void implementLogin(){
         prviousScene = Main.primaryStage.getScene();
         AnchorPane Login = new AnchorPane();
         try {
@@ -122,6 +121,11 @@ public class HomeController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    public void handleLogin(ActionEvent event) {
+        implementLogin();
     }
 
     @FXML
