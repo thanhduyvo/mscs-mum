@@ -27,7 +27,7 @@
          </font>
       </Text>
       <Button layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackBtn2" text="Back" />
-      <ComboBox fx:id="comboBox" layoutX="307.0" layoutY="309.0" prefHeight="39.0" prefWidth="76.0" promptText="Quantity:" AnchorPane.bottomAnchor="43.0">
+      <ComboBox fx:id="comboBox" layoutX="291.0" layoutY="332.0" prefHeight="20.0" prefWidth="40.0" promptText="Quantity:" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="291.0">
       <items>
          <FXCollections fx:factory="observableArrayList">
             <String fx:value="1" />
@@ -47,8 +47,8 @@
          </value>
       </ComboBox>
 
-                  <Button layoutX="429.0" layoutY="309.0" mnemonicParsing="false" onAction="#handleAddToCart" text="Add to Cart" AnchorPane.bottomAnchor="43.0" />
-      <Label layoutX="212.0" layoutY="315.0" text="Quantity:" AnchorPane.bottomAnchor="43.0" />
+                  <Button layoutX="387.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleAddToCart" text="Add to Cart" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="387.0" />
+      <Label layoutX="212.0" layoutY="315.0" text="Quantity:" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="212.0" />
       <Button layoutX="618.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleHome" text="Home" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="14.0" />
    </children>
 </AnchorPane>
