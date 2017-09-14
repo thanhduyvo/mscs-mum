@@ -12,9 +12,10 @@ public class Customer extends User {
         setShoppingCart(new ShoppingCart());
     }
 
-    public Customer(String customerName, String address, String email, String bankCardNo, String shippingAddress) {
+    public Customer(int customerId, String customerName, String address, String email, String bankCardNo, String shippingAddress) {
         setOrderList(new ArrayList<Order>());
         setShoppingCart(new ShoppingCart());
+        setCustomerId(customerId);
         setCustomerName(customerName);
         setAddress(address);
         setEmail(email);

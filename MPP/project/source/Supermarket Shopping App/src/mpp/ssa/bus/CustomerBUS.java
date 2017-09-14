@@ -84,7 +84,7 @@ public class CustomerBUS implements ICustomerBUS {
         try {
             CustomerDO customerDO = customerDAO.getCustomerByUsername(username);
             if(customerDO != null) {
-                return new Customer(customerDO.getCustomerName(), customerDO.getAddress(), customerDO.getEmail(),
+                return new Customer(customerDO.getId(), customerDO.getCustomerName(), customerDO.getAddress(), customerDO.getEmail(),
                         customerDO.getBankCardNo(), customerDO.getShippingAddress());
             }
         } catch (SQLException ex) {
