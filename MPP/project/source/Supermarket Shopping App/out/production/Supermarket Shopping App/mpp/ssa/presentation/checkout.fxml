@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.CheckoutController">
+   <children>
+      <Text layoutX="276.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check out" wrappingWidth="202.205078125">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Button layoutX="629.0" layoutY="416.0" mnemonicParsing="false" text="Confirm" />
+      <Button layoutX="31.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back" />
+      <Label layoutX="86.0" layoutY="186.0" text="Total Cost: ">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="258.0" text="Card Number: " />
+      <Label layoutX="86.0" layoutY="310.0" text="Shipping Address: " />
+      <Label layoutX="315.0" layoutY="198.0" prefHeight="27.0" prefWidth="117.0" text="\$0" />
+      <TextField layoutX="295.0" layoutY="252.0" promptText="XXX-XXXX-XXX-XXXX" />
+      <TextField layoutX="295.0" layoutY="310.0" />
+      <Label layoutX="86.0" layoutY="96.0" text="Original Cost: " />
+      <Label layoutX="86.0" layoutY="137.0" text="Discount:" />
+      <Line endX="100.0" layoutX="218.0" layoutY="175.0" startX="-100.0" />
+      <Label layoutX="305.0" layoutY="96.0" prefHeight="27.0" prefWidth="117.0" text="\$0" />
+      <Label layoutX="305.0" layoutY="137.0" prefHeight="27.0" prefWidth="117.0" text="\$0" />
+      <Label layoutX="478.0" layoutY="96.0" text="Customer Name: " />
+      <Label layoutX="478.0" layoutY="137.0" text="Address: " />
+      <Label layoutX="478.0" layoutY="173.0" text="Email: " />
+      <Label layoutX="478.0" layoutY="212.0" text="Phone:" />
+      <Label layoutX="631.0" layoutY="96.0" prefHeight="27.0" prefWidth="160.0" text="Name" />
+      <Label layoutX="631.0" layoutY="137.0" prefHeight="27.0" prefWidth="160.0" text="Address" />
+      <Label layoutX="631.0" layoutY="173.0" prefHeight="27.0" prefWidth="160.0" text="Email" />
+      <Label layoutX="629.0" layoutY="212.0" prefHeight="27.0" prefWidth="160.0" text="Phone" />
+      <Button layoutX="672.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleHome" text="Home" />
+   </children>
+</AnchorPane>

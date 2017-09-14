@@ -127,7 +127,6 @@ public class HomeController {
     @FXML
     public void handleCart(ActionEvent event) {
         prviousScene = Main.primaryStage.getScene();
-        AnchorPane Cart = new AnchorPane();
 
         ShoppingCartController cartScreenController = new ShoppingCartController();
         cartScreenController.createCartPane();
@@ -217,7 +216,7 @@ public class HomeController {
     public void showProduct(int categoryId){
 
         List<Product> products = new ArrayList<Product>();
-        if(categoryId == 1 || categoryId == 0) {
+        if(categoryId == 0) {
             products = ProductBUS.getProductBUS().getAllProducts();
         }
         else {
@@ -252,12 +251,16 @@ public class HomeController {
     public static class ProductItemCell extends HBox {
         Label name = new Label();
         Label cost = new Label();
+        int ProductId;
         String labelName;
         String labelCost;
+        Double UnitCost;
 
         ProductItemCell(Product product) {
             super();
+            ProductId = product.getProductId();
             labelName = product.getProductName();
+            UnitCost = product.getUnitCost();
             labelCost = "$" + String.valueOf(product.getUnitCost());
             name.setText(labelName);
             name.setMaxWidth(Double.MAX_VALUE);

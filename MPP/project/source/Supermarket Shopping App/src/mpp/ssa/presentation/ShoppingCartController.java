@@ -101,9 +101,12 @@ public class ShoppingCartController extends HomeController {
             delect.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-
                     ShoppingCart shoppingCart = Main.userData.getCustomer().getShoppingCart();
-                    shoppingCart.deleteCartItem(0);
+                    shoppingCart.deleteCartItem(productItem.ProductId);
+                    ShoppingCartController cartScreenController = new ShoppingCartController();
+                    cartScreenController.createCartPane();
+                    cartScreenController.showLineItem();
+                    Main.primaryStage.setScene(new Scene(cartScreenController.CartPane,800,500));
                 }
             });
 
