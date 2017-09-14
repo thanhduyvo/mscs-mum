@@ -1,8 +1,5 @@
 package mpp.ssa.domain;
 
-/**
- * 
- */
 public class User {
 
     /**
@@ -15,7 +12,9 @@ public class User {
 
     private String password;
 
-    private String userType;
+    private UserType userType;
+
+    private boolean loginStatus;
 
     public String getUsername() {
         return username;
@@ -33,11 +32,19 @@ public class User {
         this.password = password;
     }
 
-    public String getUserType() {
+    public UserType getUserType() {
         return userType;
     }
 
-    public void setUserType(String userType) {
+    public void setUserType(UserType userType) {
         this.userType = userType;
+    }
+
+    public boolean isLoginStatus() {
+        return loginStatus;
+    }
+
+    public void setLoginStatus(boolean loginStatus) {
+        this.loginStatus = loginStatus;
     }
 }

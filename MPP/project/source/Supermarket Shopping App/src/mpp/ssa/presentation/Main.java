@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import mpp.ssa.UserData;
 
 import java.io.IOException;
 
@@ -23,6 +24,7 @@ public class Main extends Application {
     public static AnchorPane getPanelistView(){ return PanelistView;}
     public static Scene HOME_SCENE;
 
+    public static UserData userData = new UserData();
 
     @Override
     public void start(Stage primaryStage){

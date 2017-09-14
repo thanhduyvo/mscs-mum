@@ -1,5 +1,7 @@
 package mpp.ssa.bus;
 
+import mpp.ssa.dao.CustomerDAO;
+import mpp.ssa.dao.CustomerDO;
 import mpp.ssa.dao.UserDAO;
 import mpp.ssa.dao.UserDO;
 import mpp.ssa.domain.Customer;
@@ -9,9 +11,11 @@ import java.sql.SQLException;
 
 public class CustomerBUS implements ICustomerBUS {
 
+    private CustomerDAO customerDAO;
     private UserDAO userDAO;
 
     private CustomerBUS() {
+        customerDAO = new CustomerDAO();
         userDAO = new UserDAO();
     }
 
@@ -42,6 +46,21 @@ public class CustomerBUS implements ICustomerBUS {
 
     @Override
     public Customer register(Customer customer) {
+        return null;
+    }
+
+    @Override
+    public Customer getCustomerByUsername(String username) {
+
+        try {
+            CustomerDO customerDO = customerDAO.getCustomerByUsername(username);
+            if(customerDO != null) {
+                return new Customer(customerDO.getCustomerName(), customerDO.getAddress(), customerDO.getEmail(),
+                        customerDO.getBankCardNo(), customerDO.getShippingAddress());
+            }
+        } catch (SQLException ex) {
+        }
+
         return null;
     }
 }

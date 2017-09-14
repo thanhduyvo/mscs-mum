@@ -12,6 +12,15 @@ public class Customer extends User {
         setShoppingCart(new ShoppingCart());
     }
 
+    public Customer(String customerName, String address, String email, String bankCardNo, String shippingAddress) {
+        setOrderList(new ArrayList<Order>());
+        setShoppingCart(new ShoppingCart());
+        setCustomerName(customerName);
+        setEmail(email);
+        setBankCardNo(bankCardNo);
+        setShippingAddress(shippingAddress);
+    }
+
     private List<Order> orderList;
 
     private ShoppingCart shoppingCart;
