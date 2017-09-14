@@ -52,7 +52,7 @@ public class OrderDAO implements IOrderDAO {
     public List<OrderDO> getOrdersByCustomer(int customerId) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM Order WHERE customerId=?");
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `Order` WHERE customerId=?");
             ps.setInt(1, customerId);
             ResultSet rs = ps.executeQuery();
             List<OrderDO> orders = new ArrayList<OrderDO>();
