@@ -11,16 +11,13 @@ public class CheckoutController extends HomeController {
     AnchorPane CheckoutPane = new AnchorPane();
 
 
-
     public void createCheckoutPane(){
         try {
             CheckoutPane = FXMLLoader.load(getClass().getResource("checkout.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public void showCheckout(){
 
     }
+
 }

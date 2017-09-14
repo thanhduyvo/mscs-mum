@@ -30,8 +30,6 @@ public class HomeController {
     @FXML
     PasswordField PasswordField;
 
-    final BorderPane root = Main.getRoot();
-    final AnchorPane PaneListview = Main.getPanelistView();
     public static Scene prviousScene = Main.primaryStage.getScene();
 
     static String USERNAME, PASSWORD;
@@ -47,7 +45,7 @@ public class HomeController {
     }
 
     private CustomerBUS customerBUS;
-    private CustomerBUS getCustomerBUS() {
+    public CustomerBUS getCustomerBUS() {
         if(customerBUS == null) {
             customerBUS = new CustomerBUS();
         }
@@ -56,7 +54,7 @@ public class HomeController {
     }
 
     private ProductCategoryBUS productCategoryBUS;
-    protected ProductCategoryBUS getProductCategoryBUS() {
+    public ProductCategoryBUS getProductCategoryBUS() {
         if(productCategoryBUS == null) {
             productCategoryBUS = new ProductCategoryBUS();
         }
@@ -65,7 +63,7 @@ public class HomeController {
     }
 
     private ProductBUS productBUS;
-    protected ProductBUS getProductBUS() {
+    public ProductBUS getProductBUS() {
         if(productBUS == null) {
             productBUS = new ProductBUS();
         }
@@ -244,13 +242,12 @@ public class HomeController {
         else {
             products = getProductBUS().getProductsByCategory(categoryId);
         }
-
+        List<ProductItemCell> list = new ArrayList<>();
         if(products != null && !products.isEmpty()) {
-
-            List<ProductItemCell> list = new ArrayList<>();
-            for(Product product : products) {
+            for (Product product : products) {
                 list.add(new ProductItemCell(product));
             }
+        }
 
             productListView = new ListView<ProductItemCell>();
             ObservableList<ProductItemCell> myObservableList = FXCollections.observableList(list);
@@ -268,7 +265,6 @@ public class HomeController {
                     }
                 }
             });
-        }
     }
 
     public static class ProductItemCell extends HBox {

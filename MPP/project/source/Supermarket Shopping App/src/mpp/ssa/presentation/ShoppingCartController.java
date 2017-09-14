@@ -72,7 +72,6 @@ public class ShoppingCartController extends HomeController {
         prviousScene = Main.primaryStage.getScene();
         CheckoutController checkoutScreenController = new CheckoutController();
         checkoutScreenController.createCheckoutPane();
-        checkoutScreenController.showCheckout();
         Main.primaryStage.setScene(new Scene(checkoutScreenController.CheckoutPane,800,500));
 
     }
