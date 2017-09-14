@@ -8,6 +8,6 @@
 
 <AnchorPane prefHeight="336.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.HomeController">
    <children>
-      <ListView fx:id="listView" layoutX="-23.0" layoutY="-7.0" onMouseClicked="#handleItemClick" prefHeight="336.0" prefWidth="236.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ListView fx:id="listView" layoutX="-23.0" layoutY="108.0" onMouseClicked="#handleItemClick" prefHeight="228.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0" />
    </children>
 </AnchorPane>

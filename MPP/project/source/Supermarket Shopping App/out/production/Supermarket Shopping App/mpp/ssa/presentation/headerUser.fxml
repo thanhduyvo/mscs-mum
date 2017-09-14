@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
@@ -10,14 +11,21 @@
 <AnchorPane prefHeight="96.0" prefWidth="1042.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.HomeController">
    <children>
       <Hyperlink layoutX="940.0" layoutY="16.0" onAction="#handleCart" prefHeight="48.0" prefWidth="60.0" text="Cart" AnchorPane.rightAnchor="6.0" />
-      <TextField layoutX="151.0" layoutY="21.0" prefHeight="39.0" prefWidth="468.0" promptText="Search" />
-      <Label layoutX="14.0" layoutY="9.0" prefHeight="62.0" prefWidth="83.0" text="Logo" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="9.0" />
-      <Button layoutX="630.0" layoutY="21.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="78.0" text="search" />
+      <Label layoutX="432.0" layoutY="22.0" text="HOME">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
       <Text layoutX="729.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" />
       <Label fx:id="labelUserName" layoutX="810.0" layoutY="16.0" prefHeight="27.0" prefWidth="138.0" textFill="#f50000">
          <font>
             <Font size="33.0" />
          </font>
       </Label>
+      <ImageView fitHeight="53.0" fitWidth="74.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
