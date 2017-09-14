@@ -19,5 +19,4 @@ public class CheckoutController extends HomeController {
         }
 
     }
-
 }

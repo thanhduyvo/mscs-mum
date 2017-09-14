@@ -12,6 +12,14 @@ public class LineItem {
         setProduct(new Product());
     }
 
+    public LineItem(int lineItemId, String productName, int quantity, double unitCost, double subtotal) {
+        setLineItemId(lineItemId);
+        setProductName(productName);
+        setQuantity(quantity);
+        setUnitCost(unitCost);
+        setSubtotal(subtotal);
+    }
+
     private Product product;
 
     private int lineItemId;

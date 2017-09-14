@@ -15,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import mpp.ssa.domain.LineItem;
+import mpp.ssa.domain.ShoppingCart;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,7 +27,6 @@ public class ShoppingCartController extends HomeController {
     @FXML
     ListView<HBoxCell> listView;
 
-
     public void createCartPane(){
         try {
             CartPane = FXMLLoader.load(getClass().getResource("shoppingCart.fxml"));
@@ -37,20 +37,13 @@ public class ShoppingCartController extends HomeController {
         }
     }
 
-    public void showLineItem(){
-        LineItem a = new LineItem();
-        a.setProductName("item A");
-        a.setQuantity(3);
-        a.setUnitCost(124);
-
-        LineItem b = new LineItem();
-        b.setProductName("item B");
-        b.setQuantity(2);
-        b.setUnitCost(442);
+    public void showLineItem() {
 
         List<HBoxCell> list = new ArrayList<>();
-        list.add(new HBoxCell(a));
-        list.add(new HBoxCell(b));
+        ShoppingCart shoppingCart = Main.userData.getCustomer().getShoppingCart();
+        for(LineItem item : shoppingCart.getLineItemList()) {
+            list.add(new HBoxCell(item));
+        }
 
         ObservableList<HBoxCell> myObservableList = FXCollections.observableList(list);
         listView.setItems(myObservableList);
@@ -73,9 +66,7 @@ public class ShoppingCartController extends HomeController {
         CheckoutController checkoutScreenController = new CheckoutController();
         checkoutScreenController.createCheckoutPane();
         Main.primaryStage.setScene(new Scene(checkoutScreenController.CheckoutPane,800,500));
-
     }
-
 
     public static class HBoxCell extends HBox {
         Label name = new Label();
@@ -110,12 +101,13 @@ public class ShoppingCartController extends HomeController {
             delect.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    System.out.println("remove: " + labelName);
+
+                    ShoppingCart shoppingCart = Main.userData.getCustomer().getShoppingCart();
+                    shoppingCart.deleteCartItem(0);
                 }
             });
 
             this.getChildren().addAll(name, quantity, cost, delect);
         }
     }
-
 }

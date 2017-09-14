@@ -2,9 +2,6 @@ package mpp.ssa.domain;
 
 import java.util.*;
 
-/**
- * 
- */
 public class ShoppingCart {
 
     /**
@@ -16,8 +13,6 @@ public class ShoppingCart {
 
     private List<LineItem> lineItemList;
 
-    private int cardId;
-
     public List<LineItem> getLineItemList() {
         return lineItemList;
     }
@@ -26,11 +21,45 @@ public class ShoppingCart {
         this.lineItemList = lineItemList;
     }
 
-    public int getCardId() {
-        return cardId;
+    public boolean addCartItem(LineItem item) {
+
+        boolean isExisted = false;
+        for(LineItem _item : lineItemList) {
+            if(_item.getLineItemId() == item.getLineItemId()) {
+                _item.setQuantity(_item.getQuantity() + item.getQuantity());
+                isExisted = true;
+                break;
+            }
+        }
+
+        if(!isExisted) {
+            lineItemList.add(item);
+        }
+
+        return true;
     }
 
-    public void setCardId(int cardId) {
-        this.cardId = cardId;
+    public boolean updateQuantity(LineItem item) {
+
+        for(LineItem _item : lineItemList) {
+            if(_item.getLineItemId() == item.getLineItemId()) {
+                _item.setQuantity(item.getQuantity());
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public boolean deleteCartItem(int lineItemId) {
+
+        for(LineItem _item : lineItemList) {
+            if(_item.getLineItemId() == lineItemId) {
+                lineItemList.remove(_item);
+                return true;
+            }
+        }
+
+        return false;
     }
 }

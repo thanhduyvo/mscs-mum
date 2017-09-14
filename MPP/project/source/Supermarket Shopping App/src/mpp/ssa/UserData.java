@@ -6,6 +6,10 @@ public class UserData {
 
     private Customer customer;
 
+    public UserData() {
+        customer = new Customer();
+    }
+
     public Customer getCustomer() {
         return customer;
     }

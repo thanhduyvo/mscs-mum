@@ -14,6 +14,8 @@ public class Order {
         setLineItemList(new ArrayList<LineItem>());
     }
 
+    private Customer customer;
+
     private List<LineItem> lineItemList;
 
     private int orderId;
@@ -29,6 +31,14 @@ public class Order {
     private String shippingAddress;
 
     private double shippingCost;
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
     public List<LineItem> getLineItemList() {
         return lineItemList;

@@ -5,8 +5,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-
-
+import mpp.ssa.domain.LineItem;
+import mpp.ssa.domain.Product;
+import mpp.ssa.domain.ShoppingCart;
 import java.io.IOException;
 
 public class ProductDetailController extends HomeController {
@@ -38,7 +39,10 @@ public class ProductDetailController extends HomeController {
 
     @FXML
     public void handleAddToCart(ActionEvent event) {
-        System.out.println(comboBox.getValue().toString());
 
+        // get shopping cart data
+        ShoppingCart shoppingCart = Main.userData.getCustomer().getShoppingCart();
+        int quantity = Integer.parseInt(comboBox.getValue().toString());
+        shoppingCart.addCartItem(new LineItem());
     }
 }

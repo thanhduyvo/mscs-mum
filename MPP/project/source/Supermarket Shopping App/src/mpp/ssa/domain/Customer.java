@@ -25,6 +25,8 @@ public class Customer extends User {
 
     private ShoppingCart shoppingCart;
 
+    private int customerId;
+
     private String customerName;
 
     private String address;
@@ -49,6 +51,14 @@ public class Customer extends User {
 
     public void setShoppingCart(ShoppingCart shoppingCart) {
         this.shoppingCart = shoppingCart;
+    }
+
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public String getCustomerName() {
