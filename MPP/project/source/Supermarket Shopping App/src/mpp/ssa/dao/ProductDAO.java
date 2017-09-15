@@ -14,19 +14,19 @@ public class ProductDAO implements IProductDAO {
 
     private ProductDO extractProductFromResultSet(ResultSet rs) throws SQLException {
         ProductDO product = new ProductDO();
-        product.setId( rs.getInt("id"));
-        product.setProductCategoryId( rs.getInt("productCategoryId"));
+        product.setId( rs.getString("id"));
+        product.setProductCategoryId( rs.getString("productCategoryId"));
         product.setProductName( rs.getString("productName"));
         product.setUnitCost(rs.getDouble("unitCost"));
         return product;
     }
 
     @Override
-    public ProductDO getProduct(int id) throws SQLException {
+    public ProductDO getProduct(String id) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM Product WHERE id=?");
-            ps.setInt(1, id);
+            ps.setString(1, id);
             ResultSet rs = ps.executeQuery();
             if(rs.next())
             {
@@ -61,11 +61,11 @@ public class ProductDAO implements IProductDAO {
     }
 
     @Override
-    public List<ProductDO> getProductsByCategory(int categoryId) throws SQLException {
+    public List<ProductDO> getProductsByCategory(String categoryId) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM Product WHERE productCategoryId=?");
-            ps.setInt(1, categoryId);
+            ps.setString(1, categoryId);
             ResultSet rs = ps.executeQuery();
             List<ProductDO> products = new ArrayList<ProductDO>();
             while(rs.next())

@@ -5,9 +5,9 @@ import java.util.List;
 
 public interface IProductDAO {
 
-    ProductDO getProduct(int id) throws SQLException;
+    ProductDO getProduct(String id) throws SQLException;
 
     List<ProductDO> getAllProducts() throws SQLException;
 
-    List<ProductDO> getProductsByCategory(int categoryId) throws SQLException;
+    List<ProductDO> getProductsByCategory(String categoryId) throws SQLException;
 }

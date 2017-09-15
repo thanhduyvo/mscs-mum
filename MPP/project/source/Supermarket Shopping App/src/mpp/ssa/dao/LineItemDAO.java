@@ -16,13 +16,14 @@ public class LineItemDAO implements ILineItemDAO {
     public boolean insertLineItem(LineItemDO lineItem) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO LineItem VALUES (NULL, ?, ?, ?, ?, ?, ?)");
-            ps.setInt(1, lineItem.getOrderId());
-            ps.setInt(2, lineItem.getProductId());
-            ps.setString(3, lineItem.getProductName());
-            ps.setInt(4, lineItem.getQuantity());
-            ps.setDouble(5, lineItem.getUnitCost());
-            ps.setDouble(6, lineItem.getSubtotal());
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO LineItem VALUES (?, ?, ?, ?, ?, ?, ?)");
+            ps.setString(1, lineItem.getId());
+            ps.setString(2, lineItem.getOrderId());
+            ps.setString(3, lineItem.getProductId());
+            ps.setString(4, lineItem.getProductName());
+            ps.setInt(5, lineItem.getQuantity());
+            ps.setDouble(6, lineItem.getUnitCost());
+            ps.setDouble(7, lineItem.getSubtotal());
             int i = ps.executeUpdate();
             if(i == 1) {
                 return true;

@@ -12,7 +12,7 @@ public class LineItem {
         setProduct(new Product());
     }
 
-    public LineItem(int lineItemId, String productName, int quantity, double unitCost, double subtotal) {
+    public LineItem(String lineItemId, String productName, int quantity, double unitCost, double subtotal) {
         setLineItemId(lineItemId);
         setProductName(productName);
         setQuantity(quantity);
@@ -22,7 +22,7 @@ public class LineItem {
 
     private Product product;
 
-    private int lineItemId;
+    private String lineItemId;
 
     private String productName;
 
@@ -40,11 +40,11 @@ public class LineItem {
         this.product = product;
     }
 
-    public int getLineItemId() {
+    public String getLineItemId() {
         return lineItemId;
     }
 
-    public void setLineItemId(int lineItemId) {
+    public void setLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
     }
 

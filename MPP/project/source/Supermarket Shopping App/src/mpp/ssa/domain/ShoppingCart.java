@@ -52,10 +52,10 @@ public class ShoppingCart {
         return false;
     }
 
-    public boolean deleteCartItem(int lineItemId) {
+    public boolean deleteCartItem(String lineItemId) {
 
         for(LineItem _item : lineItemList) {
-            if(_item.getLineItemId() == lineItemId) {
+            if(_item.getLineItemId().equals(lineItemId)) {
                 lineItemList.remove(_item);
                 return true;
             }

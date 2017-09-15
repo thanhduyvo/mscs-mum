@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 public class OrderBUS implements IOrderBUS {
 
@@ -39,13 +40,19 @@ public class OrderBUS implements IOrderBUS {
     public boolean placeOrder(Order order) {
 
         try {
-            boolean retValue = orderDAO.insertOrder(new OrderDO(order.getCustomer().getCustomerId(),
-                    order.getDateCreated().toString(),
-                    order.getDateShipped().toString(),
-                    order.getStatus(),
-                    order.getBankCardNo(),
-                    order.getShippingAddress(),
-                    order.getShippingCost()));
+            UUID orderId = UUID.randomUUID();
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+            Date date = new Date();
+            boolean retValue = orderDAO.insertOrder(
+                    new OrderDO(
+                        orderId.toString(),
+                        order.getCustomer().getCustomerId(),
+                        dateFormat.format(date),
+                        dateFormat.format(date),
+                        order.getStatus(),
+                        order.getBankCardNo(),
+                        order.getShippingAddress(),
+                        order.getShippingCost()));
             if(retValue) {
 
             }
@@ -56,11 +63,11 @@ public class OrderBUS implements IOrderBUS {
     }
 
     @Override
-    public List<Order> getOrdersByCustomer(int customerId) {
+    public List<Order> getOrdersByCustomer(String customerId) {
         try {
             List<OrderDO> orderDOList = orderDAO.getOrdersByCustomer(customerId);
             if(orderDOList != null) {
-                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
                 List<Order> orders = new ArrayList<Order>();
                 for(OrderDO orderDO : orderDOList) {
                     Date dateCreated = df.parse(orderDO.getDateCreated());

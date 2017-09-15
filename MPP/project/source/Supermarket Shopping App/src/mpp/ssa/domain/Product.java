@@ -12,7 +12,7 @@ public class Product {
         setProductCategory(new ProductCategory());
     }
 
-    public Product(int productId, String productName, double unitCost) {
+    public Product(String productId, String productName, double unitCost) {
         setProductCategory(new ProductCategory());
         setProductId(productId);
         setProductName(productName);
@@ -21,7 +21,7 @@ public class Product {
 
     private ProductCategory productCategory;
 
-    private int productId;
+    private String productId;
 
     private String productName;
 
@@ -35,11 +35,11 @@ public class Product {
         this.productCategory = productCategory;
     }
 
-    public int getProductId() {
+    public String getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(String productId) {
         this.productId = productId;
     }
 

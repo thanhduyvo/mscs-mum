@@ -12,7 +12,7 @@ public class Customer extends User {
         setShoppingCart(new ShoppingCart());
     }
 
-    public Customer(int customerId, String customerName, String address, String email, String bankCardNo, String shippingAddress) {
+    public Customer(String customerId, String customerName, String address, String email, String bankCardNo, String shippingAddress) {
         setOrderList(new ArrayList<Order>());
         setShoppingCart(new ShoppingCart());
         setCustomerId(customerId);
@@ -27,7 +27,7 @@ public class Customer extends User {
 
     private ShoppingCart shoppingCart;
 
-    private int customerId;
+    private String customerId;
 
     private String customerName;
 
@@ -55,11 +55,11 @@ public class Customer extends User {
         this.shoppingCart = shoppingCart;
     }
 
-    public int getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
 

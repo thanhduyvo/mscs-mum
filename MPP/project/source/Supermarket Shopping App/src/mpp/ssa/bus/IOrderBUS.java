@@ -7,5 +7,5 @@ public interface IOrderBUS {
 
     boolean placeOrder(Order order);
 
-    List<Order> getOrdersByCustomer(int customerId);
+    List<Order> getOrdersByCustomer(String customerId);
 }

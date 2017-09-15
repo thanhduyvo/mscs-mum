@@ -14,7 +14,7 @@ public class ProductCategoryDAO implements IProductCategoryDAO {
 
     private ProductCategoryDO extractProductCategoryFromResultSet(ResultSet rs) throws SQLException {
         ProductCategoryDO productCategory = new ProductCategoryDO();
-        productCategory.setId( rs.getInt("id"));
+        productCategory.setId( rs.getString("id"));
         productCategory.setCategoryName( rs.getString("categoryName"));
         return productCategory;
     }

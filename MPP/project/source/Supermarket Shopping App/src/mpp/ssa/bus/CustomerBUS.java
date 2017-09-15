@@ -8,6 +8,7 @@ import mpp.ssa.domain.Customer;
 import mpp.ssa.util.SecurityHelper;
 
 import java.sql.SQLException;
+import java.util.UUID;
 
 public class CustomerBUS implements ICustomerBUS {
 
@@ -54,6 +55,8 @@ public class CustomerBUS implements ICustomerBUS {
             boolean retValue = userDAO.insertUser(user);
             if(retValue) {
                 CustomerDO customerDO = new CustomerDO();
+                UUID customerId = UUID.randomUUID();
+                customerDO.setId(customerId.toString());
                 customerDO.setUsername(customer.getUsername());
                 customerDO.setCustomerName(customer.getCustomerName());
                 customerDO.setAddress(customer.getAddress());
@@ -62,12 +65,8 @@ public class CustomerBUS implements ICustomerBUS {
                 customerDO.setShippingAddress(customer.getShippingAddress());
                 retValue = customerDAO.insertCustomer(customerDO);
                 if(retValue) {
-                    // find customer
-                    CustomerDO foundCustomer = customerDAO.getCustomerByUsername(customer.getUsername());
-                    if(foundCustomer != null) {
-                        customer.setCustomerId(foundCustomer.getId());
-                        return customer;
-                    }
+                    customer.setCustomerId(customerId.toString());
+                    return customer;
                 }
             }
 

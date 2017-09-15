@@ -29,7 +29,7 @@ public class ProductBUS implements IProductBUS {
     }
 
     @Override
-    public Product getProductDetails(int id) {
+    public Product getProductDetails(String id) {
 
         try {
             ProductDO product = productDAO.getProduct(id);
@@ -60,7 +60,7 @@ public class ProductBUS implements IProductBUS {
     }
 
     @Override
-    public List<Product> getProductsByCategory(int categoryId) {
+    public List<Product> getProductsByCategory(String categoryId) {
         try {
             List<ProductDO> productDOList = productDAO.getProductsByCategory(categoryId);
             if(productDOList != null) {

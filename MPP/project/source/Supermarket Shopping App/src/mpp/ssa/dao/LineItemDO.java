@@ -2,11 +2,11 @@ package mpp.ssa.dao;
 
 public class LineItemDO {
 
-    private int id;
+    private String id;
 
-    private int orderId;
+    private String orderId;
 
-    private int productId;
+    private String productId;
 
     private String productName;
 
@@ -16,27 +16,27 @@ public class LineItemDO {
 
     private double subtotal;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public int getOrderId() {
+    public String getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(int orderId) {
+    public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
 
-    public int getProductId() {
+    public String getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(String productId) {
         this.productId = productId;
     }
 

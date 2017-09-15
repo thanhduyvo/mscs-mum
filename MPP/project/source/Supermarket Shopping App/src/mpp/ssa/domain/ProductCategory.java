@@ -11,20 +11,20 @@ public class ProductCategory {
     public ProductCategory() {
     }
 
-    public ProductCategory(int categoryId, String categoryName ) {
+    public ProductCategory(String categoryId, String categoryName ) {
         setCategoryId(categoryId);
         setCategoryName(categoryName);
     }
 
-    private int categoryId;
+    private String categoryId;
 
     private String categoryName;
 
-    public int getCategoryId() {
+    public String getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(int categoryId) {
+    public void setCategoryId(String categoryId) {
         this.categoryId = categoryId;
     }
 

@@ -2,7 +2,7 @@ package mpp.ssa.dao;
 
 public class UserSettingDO {
 
-    private int id;
+    private String id;
 
     private String username;
 

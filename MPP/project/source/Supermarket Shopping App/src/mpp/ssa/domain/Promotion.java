@@ -16,7 +16,7 @@ public class Promotion {
 
     private Product product;
 
-    private int promotionId;
+    private String promotionId;
 
     private double discountPercentage;
 
@@ -32,11 +32,11 @@ public class Promotion {
         this.product = product;
     }
 
-    public int getPromotionId() {
+    public String getPromotionId() {
         return promotionId;
     }
 
-    public void setPromotionId(int promotionId) {
+    public void setPromotionId(String promotionId) {
         this.promotionId = promotionId;
     }
 

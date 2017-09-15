@@ -14,7 +14,7 @@ public class UserSetting {
 
     private User user;
 
-    private int settingId;
+    private String settingId;
 
     private String settingName;
 
@@ -28,11 +28,11 @@ public class UserSetting {
         this.user = user;
     }
 
-    public int getSettingId() {
+    public String getSettingId() {
         return settingId;
     }
 
-    public void setSettingId(int settingId) {
+    public void setSettingId(String settingId) {
         this.settingId = settingId;
     }
 

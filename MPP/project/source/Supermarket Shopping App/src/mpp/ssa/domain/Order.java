@@ -14,7 +14,7 @@ public class Order {
         setLineItemList(new ArrayList<LineItem>());
     }
 
-    public Order(int orderId, Date dateCreated, Date dateShipped,
+    public Order(String orderId, Date dateCreated, Date dateShipped,
                  String status, String bankCardNo, String shippingAddress, double shippingCost) {
         setOrderId(orderId);
         setDateCreated(dateCreated);
@@ -29,7 +29,7 @@ public class Order {
 
     private List<LineItem> lineItemList;
 
-    private int orderId;
+    private String orderId;
 
     private Date dateCreated;
 
@@ -59,11 +59,11 @@ public class Order {
         this.lineItemList = lineItemList;
     }
 
-    public int getOrderId() {
+    public String getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(int orderId) {
+    public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
 

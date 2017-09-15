@@ -17,8 +17,8 @@ public class OrderDAO implements IOrderDAO {
 
     private OrderDO extractOrderFromResultSet(ResultSet rs) throws SQLException {
         OrderDO order = new OrderDO();
-        order.setId( rs.getInt("id"));
-        order.setCustomerId( rs.getInt("customerId"));
+        order.setId( rs.getString("id"));
+        order.setCustomerId( rs.getString("customerId"));
         order.setDateCreated(rs.getString("dateCreated"));
         order.setDateShipped(rs.getString("dateShipped"));
         order.setStatus(rs.getString("status"));
@@ -29,11 +29,11 @@ public class OrderDAO implements IOrderDAO {
     }
 
     @Override
-    public OrderDO getOrder(int id) throws SQLException {
+    public OrderDO getOrder(String id) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM Order WHERE id=?");
-            ps.setInt(1, id);
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `Order` WHERE id=?");
+            ps.setString(1, id);
             ResultSet rs = ps.executeQuery();
             if(rs.next())
             {
@@ -49,11 +49,11 @@ public class OrderDAO implements IOrderDAO {
     }
 
     @Override
-    public List<OrderDO> getOrdersByCustomer(int customerId) throws SQLException {
+    public List<OrderDO> getOrdersByCustomer(String customerId) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM `Order` WHERE customerId=?");
-            ps.setInt(1, customerId);
+            ps.setString(1, customerId);
             ResultSet rs = ps.executeQuery();
             List<OrderDO> orders = new ArrayList<OrderDO>();
             while(rs.next())
@@ -72,14 +72,15 @@ public class OrderDAO implements IOrderDAO {
     public boolean insertOrder(OrderDO order) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO Order VALUES (NULL, ?, ?, ?, ?, ?, ?, ?)");
-            ps.setInt(1, order.getCustomerId());
-            ps.setString(2, order.getDateCreated());
-            ps.setString(3, order.getDateShipped());
-            ps.setString(4, order.getStatus());
-            ps.setString(5, order.getBankCardNo());
-            ps.setString(6, order.getShippingAddress());
-            ps.setDouble(7, order.getShippingCost());
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO `Order` VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+            ps.setString(1, order.getId());
+            ps.setString(2, order.getCustomerId());
+            ps.setString(3, order.getDateCreated());
+            ps.setString(4, order.getDateShipped());
+            ps.setString(5, order.getStatus());
+            ps.setString(6, order.getBankCardNo());
+            ps.setString(7, order.getShippingAddress());
+            ps.setDouble(8, order.getShippingCost());
             int i = ps.executeUpdate();
             if(i == 1) {
                 return true;

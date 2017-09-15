@@ -5,9 +5,9 @@ import mpp.ssa.domain.*;
 
 public interface IProductBUS {
 
-    Product getProductDetails(int id);
+    Product getProductDetails(String id);
 
     List<Product> getAllProducts();
 
-    List<Product> getProductsByCategory(int categoryId);
+    List<Product> getProductsByCategory(String categoryId);
 }

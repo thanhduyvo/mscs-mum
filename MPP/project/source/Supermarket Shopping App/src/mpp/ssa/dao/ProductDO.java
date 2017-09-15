@@ -2,27 +2,27 @@ package mpp.ssa.dao;
 
 public class ProductDO {
 
-    private int id;
+    private String id;
 
-    private int productCategoryId;
+    private String productCategoryId;
 
     private String productName;
 
     private double unitCost;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public int getProductCategoryId() {
+    public String getProductCategoryId() {
         return productCategoryId;
     }
 
-    public void setProductCategoryId(int productCategoryId) {
+    public void setProductCategoryId(String productCategoryId) {
         this.productCategoryId = productCategoryId;
     }
 

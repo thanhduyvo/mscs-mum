@@ -16,7 +16,6 @@ public class UserDAO implements IUserDAO {
     private UserDO extractUserFromResultSet(ResultSet rs) throws SQLException {
         UserDO user = new UserDO();
         user.setUsername(rs.getString("username"));
-        user.setUserType(rs.getString("userType"));
         return user;
     }
 
@@ -45,10 +44,9 @@ public class UserDAO implements IUserDAO {
     public boolean insertUser(UserDO user) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO User VALUES (?, ?, ?)");
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO User VALUES (?, ?)");
             ps.setString(1, user.getUsername());
             ps.setString(2, user.getPassword());
-            ps.setString(3, user.getUserType());
             int i = ps.executeUpdate();
             if(i == 1) {
                 return true;
@@ -67,10 +65,9 @@ public class UserDAO implements IUserDAO {
         Connection connection = dbConnection.getConnection();
         try {
             PreparedStatement ps = connection.prepareStatement(
-                    "UPDATE User SET password=?, userType=? WHERE username=?");
+                    "UPDATE User SET password=? WHERE username=?");
             ps.setString(1, user.getPassword());
-            ps.setString(2, user.getUserType());
-            ps.setString(3, user.getUsername());
+            ps.setString(2, user.getUsername());
             int i = ps.executeUpdate();
             if(i == 1) {
                 return true;

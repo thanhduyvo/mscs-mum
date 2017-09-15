@@ -21,6 +21,7 @@ import mpp.ssa.domain.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class HomeController {
     @FXML
@@ -189,7 +190,7 @@ public class HomeController {
             categoryListView.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    int categoryId = categoryListView.getSelectionModel().getSelectedItems().get(0).CategoryId;
+                    String categoryId = categoryListView.getSelectionModel().getSelectedItems().get(0).CategoryId;
                     showProduct(categoryId);
                     Main.getRoot().setCenter(productListView);
                     Main.primaryStage.setScene(Main.HOME_SCENE);
@@ -201,7 +202,7 @@ public class HomeController {
     public static class CategoryItemCell extends HBox {
         Label name = new Label();
         String labelName;
-        Integer CategoryId;
+        String CategoryId;
 
         CategoryItemCell(ProductCategory category) {
             super();
@@ -238,15 +239,16 @@ public class HomeController {
         }
     }
 
-    public void showProduct(int categoryId){
+    public void showProduct(String categoryId){
 
         List<Product> products = new ArrayList<Product>();
-        if(categoryId == 0) {
+        if(categoryId.equals("0")) {
             products = ProductBUS.getProductBUS().getAllProducts();
         }
         else {
             products = ProductBUS.getProductBUS().getProductsByCategory(categoryId);
         }
+
         List<ProductItemCell> list = new ArrayList<>();
         if(products != null && !products.isEmpty()) {
             for (Product product : products) {
@@ -276,7 +278,7 @@ public class HomeController {
     public static class ProductItemCell extends HBox {
         Label name = new Label();
         Label cost = new Label();
-        int ProductId;
+        String ProductId;
         String labelName;
         String labelCost;
         Double UnitCost;

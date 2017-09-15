@@ -15,7 +15,7 @@ public class CustomerDAO implements ICustomerDAO {
 
     private CustomerDO extractCustomerFromResultSet(ResultSet rs) throws SQLException {
         CustomerDO customer = new CustomerDO();
-        customer.setId( rs.getInt("id"));
+        customer.setId( rs.getString("id"));
         customer.setUsername( rs.getString("username"));
         customer.setCustomerName( rs.getString("customerName"));
         customer.setAddress(rs.getString("address"));
@@ -47,13 +47,14 @@ public class CustomerDAO implements ICustomerDAO {
     public boolean insertCustomer(CustomerDO customer) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO Customer VALUES (NULL, ?, ?, ?, ?, ?, ?)");
-            ps.setString(1, customer.getUsername());
-            ps.setString(2, customer.getCustomerName());
-            ps.setString(3, customer.getAddress());
-            ps.setString(4, customer.getEmail());
-            ps.setString(5, customer.getBankCardNo());
-            ps.setString(6, customer.getShippingAddress());
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO Customer VALUES (?, ?, ?, ?, ?, ?, ?)");
+            ps.setString(1, customer.getId());
+            ps.setString(2, customer.getUsername());
+            ps.setString(3, customer.getCustomerName());
+            ps.setString(4, customer.getAddress());
+            ps.setString(5, customer.getEmail());
+            ps.setString(6, customer.getBankCardNo());
+            ps.setString(7, customer.getShippingAddress());
             int i = ps.executeUpdate();
             if(i == 1) {
                 return true;

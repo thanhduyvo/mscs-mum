@@ -2,9 +2,9 @@ package mpp.ssa.dao;
 
 public class PromotionDO {
 
-    private int id;
+    private String id;
 
-    private int productId;
+    private String productId;
 
     private double discountPercentage;
 
@@ -12,19 +12,19 @@ public class PromotionDO {
 
     private String endDate;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public int getProductId() {
+    public String getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(String productId) {
         this.productId = productId;
     }
 
