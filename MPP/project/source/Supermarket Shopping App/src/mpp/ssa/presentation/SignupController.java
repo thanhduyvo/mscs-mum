@@ -13,7 +13,6 @@ import java.io.IOException;
 public class SignupController extends HomeController {
     AnchorPane SignupPane = new AnchorPane();
 
-
     @FXML
     private TextField txtPhone;
 

@@ -1,9 +1,7 @@
 package mpp.ssa.bus;
 
-import mpp.ssa.dao.LineItemDAO;
-import mpp.ssa.dao.OrderDAO;
-import mpp.ssa.dao.OrderDO;
-import mpp.ssa.dao.ProductDO;
+import mpp.ssa.dao.*;
+import mpp.ssa.domain.LineItem;
 import mpp.ssa.domain.Order;
 import mpp.ssa.domain.Product;
 
@@ -54,7 +52,20 @@ public class OrderBUS implements IOrderBUS {
                         order.getShippingAddress(),
                         order.getShippingCost()));
             if(retValue) {
+                for(LineItem item : order.getLineItemList()) {
+                    LineItemDO lineItemDO = new LineItemDO();
+                    UUID lineItemId = UUID.randomUUID();
+                    lineItemDO.setId(lineItemId.toString());
+                    lineItemDO.setOrderId(orderId.toString());
+                    lineItemDO.setProductId(item.getLineItemId());
+                    lineItemDO.setProductName(item.getProductName());
+                    lineItemDO.setQuantity(item.getQuantity());
+                    lineItemDO.setUnitCost(item.getUnitCost());
+                    lineItemDO.setSubtotal(item.getSubtotal());
+                    lineItemDAO.insertLineItem(lineItemDO);
+                }
 
+                return true;
             }
         } catch (SQLException ex) {
         }
