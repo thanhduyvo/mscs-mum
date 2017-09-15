@@ -6,13 +6,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="849.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.OrderController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.OrderController">
    <children>
       <Label layoutX="293.0" layoutY="14.0" text="Order History">
          <font>
             <Font size="44.0" />
          </font>
       </Label>
-      <ListView fx:id="listView" layoutX="3.0" layoutY="84.0" prefHeight="468.0" prefWidth="839.0" />
+      <ListView fx:id="listView" layoutX="3.0" layoutY="84.0" prefHeight="468.0" prefWidth="841.0" />
    </children>
 </AnchorPane>
