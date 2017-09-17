@@ -12,6 +12,8 @@ import mpp.ssa.bus.OrderBUS;
 import mpp.ssa.domain.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductDetailController extends HomeController {
     AnchorPane anchorPane = new AnchorPane();
@@ -50,15 +52,18 @@ public class ProductDetailController extends HomeController {
 
     @FXML
     public void handleBuy1Click(ActionEvent event){
-        getShoppingCartInfo();
         CheckOut();
     }
 
-    public void CheckOut(){
+    public void CheckOut() {
         Order order = new Order();
         order.setStatus("Ordered");
         order.setCustomer(customer);
-        order.setLineItemList(customer.getShoppingCart().getLineItemList());
+        int quantity = Integer.parseInt(comboBox.getValue().toString());
+        List<LineItem> lineItems = new ArrayList<LineItem>();
+        lineItems.add(new LineItem(productItem.ProductId, productItem.labelName,
+                quantity, productItem.UnitCost, quantity * productItem.UnitCost));
+        order.setLineItemList(lineItems);
         boolean retVal = OrderBUS.getOrderBUS().placeOrder(order);
         if(retVal) {
             customer.getOrderList().add(order);
@@ -78,7 +83,6 @@ public class ProductDetailController extends HomeController {
     }
 
     public void getShoppingCartInfo(){
-
         // get shopping cart data
         ShoppingCart shoppingCart = Main.userData.getCustomer().getShoppingCart();
         int quantity = Integer.parseInt(comboBox.getValue().toString());

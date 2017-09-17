@@ -40,18 +40,20 @@ public class OrderBUS implements IOrderBUS {
         try {
             UUID orderId = UUID.randomUUID();
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-            Date date = new Date();
             boolean retValue = orderDAO.insertOrder(
                     new OrderDO(
                         orderId.toString(),
                         order.getCustomer().getCustomerId(),
-                        dateFormat.format(date),
-                        dateFormat.format(date),
+                        dateFormat.format(order.getDateCreated()),
+                        dateFormat.format(order.getDateShipped()),
                         order.getStatus(),
                         order.getBankCardNo(),
                         order.getShippingAddress(),
                         order.getShippingCost()));
             if(retValue) {
+                // reset order Id
+                order.setOrderId(orderId.toString());
+
                 for(LineItem item : order.getLineItemList()) {
                     LineItemDO lineItemDO = new LineItemDO();
                     UUID lineItemId = UUID.randomUUID();
@@ -62,7 +64,11 @@ public class OrderBUS implements IOrderBUS {
                     lineItemDO.setQuantity(item.getQuantity());
                     lineItemDO.setUnitCost(item.getUnitCost());
                     lineItemDO.setSubtotal(item.getSubtotal());
-                    lineItemDAO.insertLineItem(lineItemDO);
+                    retValue = lineItemDAO.insertLineItem(lineItemDO);
+                    if(retValue) {
+                        // reset line item Id
+                        item.setLineItemId(lineItemId.toString());
+                    }
                 }
 
                 return true;

@@ -1,5 +1,7 @@
 package mpp.ssa.domain;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -12,6 +14,9 @@ public class Order {
      */
     public Order() {
         setLineItemList(new ArrayList<LineItem>());
+        Date currentDate = new Date();
+        setDateCreated(currentDate);
+        setDateShipped(currentDate);
     }
 
     public Order(String orderId, Date dateCreated, Date dateShipped,
