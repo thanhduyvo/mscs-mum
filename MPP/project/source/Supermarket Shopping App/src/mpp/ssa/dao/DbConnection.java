@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import mpp.ssa.util.ConfigurationHelper;
+import org.sqlite.SQLiteConnection;
 
 public class DbConnection {
 

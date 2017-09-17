@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
+import mpp.ssa.UserData;
 import mpp.ssa.bus.CustomerBUS;
 import mpp.ssa.bus.OrderBUS;
 import mpp.ssa.bus.ProductBUS;
@@ -71,6 +72,15 @@ public class HomeController {
     }
 
     @FXML
+    public void handleSignOut(ActionEvent event){
+        Main.userData = new UserData();
+        createHeader();
+        Main.getRoot().setTop(Header);
+        Main.primaryStage.setScene(Main.HOME_SCENE);
+        Notification.Notifier.INSTANCE.notifyInfo("Info","Sign out");
+    }
+
+    @FXML
     void handleCheckLogin(ActionEvent event){
         USERNAME = UsernameField.getText();
         PASSWORD = PasswordField.getText();
@@ -97,6 +107,8 @@ public class HomeController {
                 customer.setOrderList(orders);
                 customer.setUserType(UserType.getUserType(customer.calculateTotalOrders()));
                 Notification.Notifier.INSTANCE.notifySuccess("Success","Login Successfully");
+
+
 
                 Main.userData.setCustomer(customer);
             }

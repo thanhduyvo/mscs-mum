@@ -55,10 +55,6 @@ public class ShoppingCartController extends HomeController {
         });
     }
 
-    @FXML
-    public void handleBack(ActionEvent event) {
-        Main.primaryStage.setScene(prviousScene);
-    }
 
     @FXML
     public void handleCheckout(ActionEvent event){
