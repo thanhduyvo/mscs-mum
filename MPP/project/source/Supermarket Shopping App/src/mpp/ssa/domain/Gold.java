@@ -3,7 +3,12 @@ package mpp.ssa.domain;
 public class Gold extends UserType  {
 
     @Override
-    public double calcDiscount() {
-        return 15;
+    public String getTypeName() {
+        return "Gold";
+    }
+
+    @Override
+    public double calcDiscount(double totalAmount) {
+        return totalAmount * 0.15;
     }
 }

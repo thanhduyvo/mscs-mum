@@ -88,12 +88,14 @@ public class HomeController {
                 Customer customer = CustomerBUS.getCustomerBUS().getCustomerByUsername(USERNAME);
                 customer.setUsername(USERNAME);
                 customer.setLoginStatus(true);
-                customer.setUserType(new Standard());
                 customer.setShoppingCart(Main.userData.getCustomer().getShoppingCart());
 
-                // get customer's orders
+                // determine user type
+
                 List<Order> orders = OrderBUS.getOrderBUS().getOrdersByCustomer(customer.getCustomerId());
                 customer.setOrderList(orders);
+                customer.setUserType(UserType.getUserType(customer.calculateTotalOrders()));
+
                 Main.userData.setCustomer(customer);
             }
             else {

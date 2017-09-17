@@ -6,13 +6,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import mpp.ssa.bus.OrderBUS;
-import mpp.ssa.domain.Customer;
-import mpp.ssa.domain.LineItem;
-import mpp.ssa.domain.Order;
-import mpp.ssa.domain.ShoppingCart;
+import mpp.ssa.domain.*;
 
 import java.io.IOException;
-import java.util.List;
 
 public class CheckoutController extends HomeController {
     AnchorPane CheckoutPane = new AnchorPane();
@@ -48,12 +44,12 @@ public class CheckoutController extends HomeController {
     public void createCheckoutPane(){
         try {
             CheckoutPane = FXMLLoader.load(getClass().getResource("checkout.fxml"));
-            setInfor();
+            setInformation();
             lbAddress.setText(customer.getAddress());
             lbEmail.setText(customer.getEmail());
             lbName.setText(customer.getCustomerName());
             lbOriginCost.setText("$" + String.valueOf(calculateOriginCost()));
-            lbTotalCost.setText("$" + String.valueOf(calculateTotalCost(1)));
+            lbTotalCost.setText("$" + String.valueOf(calculateTotalCost()));
 
             txtCardNumber.setText(customer.getBankCardNo());
             txtShppingAddress.setText(customer.getShippingAddress());
@@ -63,7 +59,7 @@ public class CheckoutController extends HomeController {
         }
     }
 
-    public void setInfor(){
+    public void setInformation(){
         lbAddress = (Label) CheckoutPane.lookup("#lbAddress");
         lbTotalCost = (Label) CheckoutPane.lookup("#lbTotalCost");
         lbOriginCost = (Label) CheckoutPane.lookup("#lbOriginCost");
@@ -77,16 +73,15 @@ public class CheckoutController extends HomeController {
     }
 
     public double calculateOriginCost(){
-        double result = 0.0;
         ShoppingCart shoppingCart = customer.getShoppingCart();
-        for(LineItem item: shoppingCart.getLineItemList()){
-            result += item.getSubtotal();
-        }
+        double result = shoppingCart.calculateTotalLineItems();
         return Math.round((result * 100)/100);
     }
 
-    public double calculateTotalCost(double discount){
-        return calculateOriginCost() * discount;
+    public double calculateTotalCost() {
+        double originalCost = calculateOriginCost();
+        double discountValue = customer.getUserType().calcDiscount(originalCost);
+        return originalCost - discountValue;
     }
 
     @FXML
@@ -99,9 +94,10 @@ public class CheckoutController extends HomeController {
         order.setLineItemList(customer.getShoppingCart().getLineItemList());
         boolean retVal = OrderBUS.getOrderBUS().placeOrder(order);
         if(retVal) {
-            // do something
+            customer.getOrderList().add(order);
+            customer.setUserType(UserType.getUserType(customer.calculateTotalOrders()));
         } else {
-            // do something
+            // need to show message for client
         }
     }
 }

@@ -2,7 +2,10 @@ package mpp.ssa.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LineItemDAO implements ILineItemDAO {
 
@@ -10,6 +13,18 @@ public class LineItemDAO implements ILineItemDAO {
 
     public LineItemDAO() {
         dbConnection = new DbConnection();
+    }
+
+    private LineItemDO extractLineItemFromResultSet(ResultSet rs) throws SQLException {
+        LineItemDO lineItem = new LineItemDO();
+        lineItem.setId( rs.getString("id"));
+        lineItem.setOrderId( rs.getString("orderId"));
+        lineItem.setProductId( rs.getString("productId"));
+        lineItem.setProductName( rs.getString("productName"));
+        lineItem.setQuantity(rs.getInt("quantity"));
+        lineItem.setUnitCost(rs.getDouble("unitCost"));
+        lineItem.setSubtotal(rs.getDouble("subtotal"));
+        return lineItem;
     }
 
     @Override
@@ -35,5 +50,25 @@ public class LineItemDAO implements ILineItemDAO {
         }
 
         return false;
+    }
+
+    @Override
+    public List<LineItemDO> getLineItemsByOrder(String orderId) throws SQLException {
+        Connection connection = dbConnection.getConnection();
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM LineItem WHERE orderId=?");
+            ps.setString(1, orderId);
+            ResultSet rs = ps.executeQuery();
+            List<LineItemDO> lineItems = new ArrayList<LineItemDO>();
+            while(rs.next())
+            {
+                LineItemDO lineItem = extractLineItemFromResultSet(rs);
+                lineItems.add(lineItem);
+            }
+            return lineItems;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return null;
     }
 }

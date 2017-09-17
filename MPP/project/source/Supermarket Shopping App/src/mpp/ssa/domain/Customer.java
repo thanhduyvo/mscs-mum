@@ -102,4 +102,12 @@ public class Customer extends User {
     public void setShippingAddress(String shippingAddress) {
         this.shippingAddress = shippingAddress;
     }
+
+    public double calculateTotalOrders() {
+        double totalValue = 0;
+        for(Order order : orderList) {
+            totalValue += order.calculateTotalLineItems();
+        }
+        return totalValue;
+    }
 }

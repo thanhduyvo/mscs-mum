@@ -114,4 +114,12 @@ public class Order {
     public void setShippingCost(double shippingCost) {
         this.shippingCost = shippingCost;
     }
+
+    public double calculateTotalLineItems() {
+        double totalValue = 0;
+        for(LineItem item : lineItemList) {
+            totalValue += item.getSubtotal();
+        }
+        return totalValue;
+    }
 }

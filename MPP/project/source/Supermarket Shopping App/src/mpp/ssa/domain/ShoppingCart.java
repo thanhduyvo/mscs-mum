@@ -63,4 +63,12 @@ public class ShoppingCart {
 
         return false;
     }
+
+    public double calculateTotalLineItems() {
+        double totalValue = 0;
+        for(LineItem item : lineItemList) {
+            totalValue += item.getSubtotal();
+        }
+        return totalValue;
+    }
 }

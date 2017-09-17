@@ -83,13 +83,17 @@ public class OrderBUS implements IOrderBUS {
                 for(OrderDO orderDO : orderDOList) {
                     Date dateCreated = df.parse(orderDO.getDateCreated());
                     Date dateShipped = df.parse(orderDO.getDateShipped());
-                    orders.add(new Order(orderDO.getId(),
+                    Order order = new Order(orderDO.getId(),
                             dateCreated,
                             dateShipped,
                             orderDO.getStatus(),
                             orderDO.getBankCardNo(),
                             orderDO.getShippingAddress(),
-                            orderDO.getShippingCost()));
+                            orderDO.getShippingCost());
+                    List<LineItem> lineItems = LineItemBUS.getLineItemBUS()
+                            .getLineItemsByOrder(orderDO.getId());
+                    order.setLineItemList(lineItems);
+                    orders.add(order);
                 }
                 return orders;
             }
