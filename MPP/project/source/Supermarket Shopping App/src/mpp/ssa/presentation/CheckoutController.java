@@ -99,6 +99,9 @@ public class CheckoutController extends HomeController {
             customer.setUserType(UserType.getUserType(customer.calculateTotalOrders()));
             Notification.Notifier.INSTANCE.notifySuccess("Success","Your Order is confirmed");
             Main.primaryStage.setScene(Main.HOME_SCENE);
+
+            // renew shopping cart
+            customer.setShoppingCart(new ShoppingCart());
         } else {
             // need to show message for client
             Notification.Notifier.INSTANCE.notifyError("Fail","There is some error, try again");
