@@ -16,8 +16,8 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Text layoutX="503.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" />
-      <Label fx:id="labelUserName" layoutX="599.0" layoutY="26.0" prefHeight="27.0" prefWidth="109.0" textFill="#f50000">
+      <Text layoutX="521.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" />
+      <Label fx:id="labelUserName" layoutX="604.0" layoutY="34.0" prefHeight="27.0" prefWidth="109.0" textFill="#f50000">
          <font>
             <Font size="20.0" />
          </font>
@@ -27,8 +27,8 @@
             <Image url="@images.png" />
          </image>
       </ImageView>
-      <Button layoutX="827.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleOrderBtn" prefHeight="49.0" prefWidth="139.0" text="Order History" />
+      <Button layoutX="863.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleOrderBtn" prefHeight="39.0" prefWidth="99.0" text="Order History" AnchorPane.rightAnchor="80.0" />
       <Button layoutX="110.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleClose" text="Close" />
-      <Button layoutX="724.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleSignOut" text="Sign out" />
+      <Button layoutX="757.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleSignOut" text="Sign out" AnchorPane.rightAnchor="200.0" />
    </children>
 </AnchorPane>
