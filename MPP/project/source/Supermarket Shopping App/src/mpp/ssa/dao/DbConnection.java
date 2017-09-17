@@ -31,8 +31,12 @@ public class DbConnection {
     }
 
     public Connection getConnection() {
-        if(conn == null) {
-            this.open();
+        try {
+            if(conn == null || conn.isClosed()) {
+                this.open();
+            }
+        } catch(SQLException e) {
+            System.out.println("Couldn't open connection: " + e.getMessage());
         }
 
         return conn;
