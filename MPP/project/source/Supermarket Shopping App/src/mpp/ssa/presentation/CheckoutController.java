@@ -7,7 +7,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import mpp.ssa.bus.OrderBUS;
-import mpp.ssa.domain.*;
+import mpp.ssa.domain.Customer;
+import mpp.ssa.domain.Order;
+import mpp.ssa.domain.ShoppingCart;
+import mpp.ssa.domain.UserType;
 
 import java.io.IOException;
 
@@ -87,6 +90,11 @@ public class CheckoutController extends HomeController {
 
     @FXML
     public void handleConfirm(){
+        CheckOut();
+    }
+
+    public void CheckOut(){
+
         Order order = new Order();
         order.setStatus("Ordered");
         order.setBankCardNo(txtCardNumber.getText());
@@ -99,9 +107,6 @@ public class CheckoutController extends HomeController {
             customer.setUserType(UserType.getUserType(customer.calculateTotalOrders()));
             Notification.Notifier.INSTANCE.notifySuccess("Success","Your Order is confirmed");
             Main.primaryStage.setScene(Main.HOME_SCENE);
-
-            // renew shopping cart
-            customer.setShoppingCart(new ShoppingCart());
         } else {
             // need to show message for client
             Notification.Notifier.INSTANCE.notifyError("Fail","There is some error, try again");

@@ -47,8 +47,9 @@
          </value>
       </ComboBox>
 
-                  <Button layoutX="387.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleAddToCart" text="Add to Cart" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="387.0" />
+                  <Button layoutX="387.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleAddToCart" text="Add to Cart" AnchorPane.bottomAnchor="36.0" AnchorPane.rightAnchor="180.0" />
       <Label layoutX="212.0" layoutY="315.0" text="Quantity:" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="212.0" />
       <Button layoutX="618.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleHome" text="Home" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="14.0" />
+      <Button fx:id="btnBuy1Click" layoutX="546.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleBuy1Click" text="Buy 1-click" AnchorPane.bottomAnchor="37.0" AnchorPane.rightAnchor="44.0" />
    </children>
 </AnchorPane>
