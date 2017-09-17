@@ -1,5 +1,6 @@
 package mpp.ssa.presentation;
 
+import eu.hansolo.enzo.notification.Notification;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -96,8 +97,11 @@ public class CheckoutController extends HomeController {
         if(retVal) {
             customer.getOrderList().add(order);
             customer.setUserType(UserType.getUserType(customer.calculateTotalOrders()));
+            Notification.Notifier.INSTANCE.notifySuccess("Success","Your Order is confirmed");
+            Main.primaryStage.setScene(Main.HOME_SCENE);
         } else {
             // need to show message for client
+            Notification.Notifier.INSTANCE.notifyError("Fail","There is some error, try again");
         }
     }
 }

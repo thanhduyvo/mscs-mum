@@ -22,5 +22,6 @@
             <Image url="@images.png" />
          </image>
       </ImageView>
+      <Button layoutX="99.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleClose" text="Close" />
    </children>
 </AnchorPane>

@@ -1,5 +1,7 @@
 package mpp.ssa.presentation;
 
+import eu.hansolo.enzo.notification.Notification;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -8,20 +10,19 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.*;
-
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import mpp.ssa.bus.CustomerBUS;
 import mpp.ssa.bus.OrderBUS;
 import mpp.ssa.bus.ProductBUS;
 import mpp.ssa.bus.ProductCategoryBUS;
-import mpp.ssa.bus.CustomerBUS;
 import mpp.ssa.domain.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class HomeController {
     @FXML
@@ -95,15 +96,22 @@ public class HomeController {
                 List<Order> orders = OrderBUS.getOrderBUS().getOrdersByCustomer(customer.getCustomerId());
                 customer.setOrderList(orders);
                 customer.setUserType(UserType.getUserType(customer.calculateTotalOrders()));
+                Notification.Notifier.INSTANCE.notifySuccess("Success","Login Successfully");
+
+
 
                 Main.userData.setCustomer(customer);
             }
             else {
                 // implement: notify to user
+                Notification.Notifier.INSTANCE.notifyError("Fail","Incorrect username or password");
+                return;
             }
         }
         else {
             // implement: notify to user
+            Notification.Notifier.INSTANCE.notifyError("Fail","Incorrect username or password");
+            return;
         }
     }
 
@@ -118,6 +126,12 @@ public class HomeController {
 
     @FXML
     Label labelUserName;
+
+    @FXML
+    public void handleClose(ActionEvent event){
+        Main.primaryStage.close();
+        Platform.exit();
+    }
 
     public void createHeader(){
         try {

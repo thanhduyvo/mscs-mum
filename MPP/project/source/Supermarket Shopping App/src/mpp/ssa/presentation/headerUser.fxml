@@ -11,13 +11,13 @@
 <AnchorPane prefHeight="96.0" prefWidth="1042.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.HomeController">
    <children>
       <Hyperlink layoutX="940.0" layoutY="16.0" onAction="#handleCart" prefHeight="48.0" prefWidth="60.0" text="Cart" AnchorPane.rightAnchor="6.0" />
-      <Label layoutX="432.0" layoutY="22.0" text="HOME">
+      <Label layoutX="433.0" layoutY="22.0" text="HOME">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Text layoutX="729.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" />
-      <Label fx:id="labelUserName" layoutX="810.0" layoutY="16.0" prefHeight="27.0" prefWidth="138.0" textFill="#f50000">
+      <Text layoutX="585.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" />
+      <Label fx:id="labelUserName" layoutX="666.0" layoutY="16.0" prefHeight="27.0" prefWidth="139.0" textFill="#f50000">
          <font>
             <Font size="33.0" />
          </font>
@@ -27,6 +27,7 @@
             <Image url="@images.png" />
          </image>
       </ImageView>
-      <Button layoutX="139.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleOrderBtn" text="Order History" />
+      <Button layoutX="827.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleOrderBtn" prefHeight="49.0" prefWidth="139.0" text="Order History" />
+      <Button layoutX="110.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleClose" text="Close" />
    </children>
 </AnchorPane>

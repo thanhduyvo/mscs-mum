@@ -1,13 +1,15 @@
 package mpp.ssa.presentation;
 
+import eu.hansolo.enzo.notification.Notification;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.*;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import mpp.ssa.domain.LineItem;
-import mpp.ssa.domain.Product;
 import mpp.ssa.domain.ShoppingCart;
+
 import java.io.IOException;
 
 public class ProductDetailController extends HomeController {
@@ -45,5 +47,7 @@ public class ProductDetailController extends HomeController {
         int quantity = Integer.parseInt(comboBox.getValue().toString());
         shoppingCart.addCartItem(new LineItem(productItem.ProductId, productItem.labelName,
                 quantity, productItem.UnitCost, quantity * productItem.UnitCost));
+
+        Notification.Notifier.INSTANCE.notifySuccess("Success","Items had been add to your cart");
     }
 }
