@@ -98,8 +98,6 @@ public class HomeController {
                 customer.setUserType(UserType.getUserType(customer.calculateTotalOrders()));
                 Notification.Notifier.INSTANCE.notifySuccess("Success","Login Successfully");
 
-
-
                 Main.userData.setCustomer(customer);
             }
             else {
