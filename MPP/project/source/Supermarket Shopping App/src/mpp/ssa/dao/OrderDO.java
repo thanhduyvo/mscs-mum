@@ -6,7 +6,8 @@ public class OrderDO {
     }
 
     public OrderDO(String id, String customerId, String dateCreated, String dateShipped,
-                   String status, String bankCardNo, String shippingAddress, double shippingCost) {
+                   String status, String bankCardNo, String shippingAddress,
+                   double shippingCost, double discountTotal) {
         setId(id);
         setCustomerId(customerId);
         setDateCreated(dateCreated);
@@ -15,6 +16,7 @@ public class OrderDO {
         setBankCardNo(bankCardNo);
         setShippingAddress(shippingAddress);
         setShippingCost(shippingCost);
+        setDiscountTotal(discountTotal);
     }
 
     private String id;
@@ -32,6 +34,8 @@ public class OrderDO {
     private String shippingAddress;
 
     private double shippingCost;
+
+    private double discountTotal;
 
     public String getId() {
         return id;
@@ -95,5 +99,13 @@ public class OrderDO {
 
     public void setShippingCost(double shippingCost) {
         this.shippingCost = shippingCost;
+    }
+
+    public double getDiscountTotal() {
+        return discountTotal;
+    }
+
+    public void setDiscountTotal(double discountTotal) {
+        this.discountTotal = discountTotal;
     }
 }

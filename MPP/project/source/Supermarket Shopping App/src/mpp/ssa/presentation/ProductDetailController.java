@@ -64,6 +64,7 @@ public class ProductDetailController extends HomeController {
         lineItems.add(new LineItem(productItem.ProductId, productItem.labelName,
                 quantity, productItem.UnitCost, quantity * productItem.UnitCost));
         order.setLineItemList(lineItems);
+        order.setDiscountTotal(order.calculateDiscountTotal(customer.getUserType()));
         boolean retVal = OrderBUS.getOrderBUS().placeOrder(order);
         if(retVal) {
             customer.getOrderList().add(order);
@@ -82,7 +83,7 @@ public class ProductDetailController extends HomeController {
         Notification.Notifier.INSTANCE.notifySuccess("Success","Items had been add to your cart");
     }
 
-    public void getShoppingCartInfo(){
+    public void getShoppingCartInfo() {
         // get shopping cart data
         ShoppingCart shoppingCart = Main.userData.getCustomer().getShoppingCart();
         int quantity = Integer.parseInt(comboBox.getValue().toString());

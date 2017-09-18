@@ -52,9 +52,11 @@ public class CheckoutController extends HomeController {
             lbAddress.setText(customer.getAddress());
             lbEmail.setText(customer.getEmail());
             lbName.setText(customer.getCustomerName());;
-            lbDiscount.setText("Discount");
-            lbOriginCost.setText("$" + String.valueOf(calculateOriginCost()));
-            lbTotalCost.setText("$" + String.valueOf(calculateTotalCost()));
+            double originalCost = calculateOriginCost();
+            lbOriginCost.setText("$" + String.valueOf(originalCost));
+            double discountTotal = calculateDiscountTotal(originalCost);
+            lbDiscount.setText("$" + String.valueOf(discountTotal));
+            lbTotalCost.setText("$" + String.valueOf(originalCost - discountTotal));
 
             txtCardNumber.setText(customer.getBankCardNo());
             txtShppingAddress.setText(customer.getShippingAddress());
@@ -83,10 +85,8 @@ public class CheckoutController extends HomeController {
         return Math.round((result * 100)/100);
     }
 
-    public double calculateTotalCost() {
-        double originalCost = calculateOriginCost();
-        double discountValue = customer.getUserType().calcDiscount(originalCost);
-        return originalCost - discountValue;
+    public double calculateDiscountTotal(double originalCost) {
+        return customer.getUserType().calcDiscount(originalCost);
     }
 
     @FXML
@@ -94,14 +94,14 @@ public class CheckoutController extends HomeController {
         CheckOut();
     }
 
-    public void CheckOut(){
-
+    public void CheckOut() {
         Order order = new Order();
         order.setStatus("Ordered");
         order.setBankCardNo(txtCardNumber.getText());
         order.setShippingAddress(txtShppingAddress.getText());
         order.setCustomer(customer);
         order.setLineItemList(customer.getShoppingCart().getLineItemList());
+        order.setDiscountTotal(order.calculateDiscountTotal(customer.getUserType()));
         boolean retVal = OrderBUS.getOrderBUS().placeOrder(order);
         if(retVal) {
             customer.getOrderList().add(order);

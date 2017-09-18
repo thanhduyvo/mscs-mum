@@ -25,6 +25,7 @@ public class OrderDAO implements IOrderDAO {
         order.setBankCardNo(rs.getString("bankCardNo"));
         order.setShippingAddress(rs.getString("shippingAddress"));
         order.setShippingCost(rs.getDouble("shippingCost"));
+        order.setDiscountTotal(rs.getDouble("discountTotal"));
         return order;
     }
 
@@ -72,7 +73,7 @@ public class OrderDAO implements IOrderDAO {
     public boolean insertOrder(OrderDO order) throws SQLException {
         Connection connection = dbConnection.getConnection();
         try {
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO `Order` VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO `Order` VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
             ps.setString(1, order.getId());
             ps.setString(2, order.getCustomerId());
             ps.setString(3, order.getDateCreated());
@@ -81,6 +82,7 @@ public class OrderDAO implements IOrderDAO {
             ps.setString(6, order.getBankCardNo());
             ps.setString(7, order.getShippingAddress());
             ps.setDouble(8, order.getShippingCost());
+            ps.setDouble(9, order.getDiscountTotal());
             int i = ps.executeUpdate();
             if(i == 1) {
                 return true;

@@ -49,7 +49,8 @@ public class OrderBUS implements IOrderBUS {
                         order.getStatus(),
                         order.getBankCardNo(),
                         order.getShippingAddress(),
-                        order.getShippingCost()));
+                        order.getShippingCost(),
+                        order.getDiscountTotal()));
             if(retValue) {
                 // reset order Id
                 order.setOrderId(orderId.toString());
@@ -95,7 +96,8 @@ public class OrderBUS implements IOrderBUS {
                             orderDO.getStatus(),
                             orderDO.getBankCardNo(),
                             orderDO.getShippingAddress(),
-                            orderDO.getShippingCost());
+                            orderDO.getShippingCost(),
+                            orderDO.getDiscountTotal());
                     List<LineItem> lineItems = LineItemBUS.getLineItemBUS()
                             .getLineItemsByOrder(orderDO.getId());
                     order.setLineItemList(lineItems);

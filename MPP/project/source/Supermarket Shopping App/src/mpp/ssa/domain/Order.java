@@ -20,7 +20,8 @@ public class Order {
     }
 
     public Order(String orderId, Date dateCreated, Date dateShipped,
-                 String status, String bankCardNo, String shippingAddress, double shippingCost) {
+                 String status, String bankCardNo, String shippingAddress,
+                 double shippingCost, double discountTotal) {
         setOrderId(orderId);
         setDateCreated(dateCreated);
         setDateShipped(dateShipped);
@@ -28,6 +29,7 @@ public class Order {
         setBankCardNo(bankCardNo);
         setShippingAddress(shippingAddress);
         setShippingCost(shippingCost);
+        setDiscountTotal(discountTotal);
     }
 
     private Customer customer;
@@ -47,6 +49,8 @@ public class Order {
     private String shippingAddress;
 
     private double shippingCost;
+
+    private double discountTotal;
 
     public Customer getCustomer() {
         return customer;
@@ -120,11 +124,23 @@ public class Order {
         this.shippingCost = shippingCost;
     }
 
+    public double getDiscountTotal() {
+        return discountTotal;
+    }
+
+    public void setDiscountTotal(double discountTotal) {
+        this.discountTotal = discountTotal;
+    }
+
     public double calculateTotalLineItems() {
         double totalValue = 0;
         for(LineItem item : lineItemList) {
             totalValue += item.getSubtotal();
         }
         return totalValue;
+    }
+
+    public double calculateDiscountTotal(UserType userType) {
+        return userType.calcDiscount(calculateTotalLineItems());
     }
 }
