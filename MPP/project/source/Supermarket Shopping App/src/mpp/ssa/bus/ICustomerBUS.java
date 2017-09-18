@@ -8,5 +8,7 @@ public interface ICustomerBUS {
 
     Customer register(Customer customer);
 
+    boolean updateCustomer(Customer customer);
+
     Customer getCustomerByUsername(String username);
 }

@@ -78,6 +78,31 @@ public class CustomerBUS implements ICustomerBUS {
     }
 
     @Override
+    public boolean updateCustomer(Customer customer) {
+
+        try {
+            CustomerDO customerDO = new CustomerDO();
+            customerDO.setUsername(customer.getUsername());
+            customerDO.setCustomerName(customer.getCustomerName());
+            customerDO.setAddress(customer.getAddress());
+            customerDO.setEmail(customer.getEmail());
+            customerDO.setBankCardNo(customer.getBankCardNo());
+            customerDO.setShippingAddress(customer.getShippingAddress());
+            boolean retValue = customerDAO.updateCustomer(customerDO);
+            if(retValue) {
+                // update user
+                UserDO userDO = new UserDO();
+                userDO.setUsername(customer.getUsername());
+                userDO.setPassword(customer.getPassword());
+                return userDAO.updateUser(userDO);
+            }
+        } catch (SQLException ex) {
+        }
+
+        return false;
+    }
+
+    @Override
     public Customer getCustomerByUsername(String username) {
 
         try {
