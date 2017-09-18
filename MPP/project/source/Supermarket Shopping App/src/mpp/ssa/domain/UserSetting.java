@@ -12,9 +12,16 @@ public class UserSetting {
         setUser(new User());
     }
 
+    public UserSetting(String id, String username, String settingName, String settingValue) {
+        setId(id);
+        setUser(new User(username));
+        setSettingName(settingName);
+        setSettingValue(settingValue);
+    }
+
     private User user;
 
-    private String settingId;
+    private String id;
 
     private String settingName;
 
@@ -28,12 +35,12 @@ public class UserSetting {
         this.user = user;
     }
 
-    public String getSettingId() {
-        return settingId;
+    public String getId() {
+        return id;
     }
 
-    public void setSettingId(String settingId) {
-        this.settingId = settingId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getSettingName() {
