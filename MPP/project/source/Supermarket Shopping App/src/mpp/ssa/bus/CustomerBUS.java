@@ -93,7 +93,7 @@ public class CustomerBUS implements ICustomerBUS {
                 // update user
                 UserDO userDO = new UserDO();
                 userDO.setUsername(customer.getUsername());
-                userDO.setPassword(customer.getPassword());
+                userDO.setPassword(SecurityHelper.hashMD5String(customer.getPassword()).toLowerCase());
                 return userDAO.updateUser(userDO);
             }
         } catch (SQLException ex) {

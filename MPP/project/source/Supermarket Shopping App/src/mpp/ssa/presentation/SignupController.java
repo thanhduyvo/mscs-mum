@@ -38,8 +38,7 @@ public class SignupController extends HomeController {
     @FXML
     private TextField txtCustomerName;
 
-    private Customer customer = new Customer();
-
+    protected Customer customer = new Customer();
 
     public void createSignupPane(){
         try {
@@ -75,7 +74,7 @@ public class SignupController extends HomeController {
 
     }
 
-    public void saveCustomer(){
+    public void saveCustomer() {
         customer.setAddress(txtAddress.getText());
         customer.setBankCardNo(txtCardNumber.getText());
         customer.setUsername(txtName.getText());

@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import mpp.ssa.domain.Customer;
+import mpp.ssa.bus.CustomerBUS;
 
 import java.io.IOException;
 
@@ -36,8 +36,6 @@ public class ModifyController extends SignupController {
     @FXML
     private TextField txtCustomerName;
 
-    private Customer customer = new Customer();
-
 
     public void createModifyPane(){
         try {
@@ -51,20 +49,20 @@ public class ModifyController extends SignupController {
 
 
     @FXML
-    public void handleConfirmBtn(){
+    public void handleConfirmBtn() {
        saveCustomer();
-       //update customer
-
-       if(!valid){
-           return;
-       }
-       else {
-           Notification.Notifier.INSTANCE.notifySuccess("Success","Modified successful");
-           Main.primaryStage.setScene(Main.HOME_SCENE);
-       }
-
+        if(valid) {
+            boolean retValue = CustomerBUS.getCustomerBUS().updateCustomer(customer);
+            if (retValue) {
+                customer.setCustomerId(Main.userData.getCustomer().getCustomerId());
+                Main.userData.setCustomer(customer);
+                Notification.Notifier.INSTANCE.notifySuccess("Success", "Modified successful");
+                Main.primaryStage.setScene(Main.HOME_SCENE);
+            } else {
+                Notification.Notifier.INSTANCE.notifyError("Fail", "Modified unsuccessful");
+            }
+        }
     }
-
 
     public void setInfo(AnchorPane Pane){
         txtAddress = (TextField) Pane.lookup("#txtAddress");

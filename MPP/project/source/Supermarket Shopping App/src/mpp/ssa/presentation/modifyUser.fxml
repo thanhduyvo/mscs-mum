@@ -7,7 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.SignupController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.ModifyController">
    <children>
       <Text layoutX="320.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify" wrappingWidth="160.0">
          <font>
@@ -34,7 +34,6 @@
       <TextField fx:id="txtEmail" layoutX="562.0" layoutY="194.0" />
       <TextField fx:id="txtPhone" layoutX="562.0" layoutY="252.0" />
       <Button layoutX="651.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleConfirmBtn" text="Confirm" />
-      <Text layoutX="565.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="After Sign up successfully, you have to Login" wrappingWidth="214.2236328125" />
       <Label layoutX="466.0" layoutY="97.0" text="Name:" />
       <TextField fx:id="txtCustomerName" layoutX="565.0" layoutY="91.0" />
    </children>
