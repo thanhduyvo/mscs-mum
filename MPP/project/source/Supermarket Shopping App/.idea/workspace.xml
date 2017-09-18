@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5c11ef9-8163-4d34-a127-ee71e970ae97" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Enzo_0_3_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/tilesfx_1_4_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_20_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_20_0.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../lib/sqlite-jdbc-3.20.0.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Supermarket Shopping App.iml" afterPath="$PROJECT_DIR$/Supermarket Shopping App.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/bus/CustomerBUS.java" afterPath="$PROJECT_DIR$/src/mpp/ssa/bus/CustomerBUS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/ModifyController.java" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/ModifyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/SignupController.java" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/SignupController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mpp/ssa/presentation/modifyUser.fxml" afterPath="$PROJECT_DIR$/src/mpp/ssa/presentation/modifyUser.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ssa.db" afterPath="$PROJECT_DIR$/ssa.db" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -114,8 +107,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="89" />
-    <option name="y" value="24" />
+    <option name="x" value="60" />
+    <option name="y" value="23" />
     <option name="width" value="1611" />
     <option name="height" value="951" />
   </component>
@@ -642,7 +635,7 @@
     <option name="totallyTimeSpent" value="78883000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="24" width="1611" height="951" extended-state="0" />
+    <frame x="60" y="23" width="1611" height="951" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -931,16 +924,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/signup.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1038,14 +1021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/bus/CustomerBUS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="95" column="103" lean-forward="true" selection-start-line="95" selection-start-column="103" selection-end-line="95" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/ModifyController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -1071,6 +1046,24 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/bus/CustomerBUS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="95" column="103" lean-forward="true" selection-start-line="95" selection-start-column="103" selection-end-line="95" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mpp/ssa/presentation/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-385">
+          <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
