@@ -15,10 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import mpp.ssa.UserData;
-import mpp.ssa.bus.CustomerBUS;
-import mpp.ssa.bus.OrderBUS;
-import mpp.ssa.bus.ProductBUS;
-import mpp.ssa.bus.ProductCategoryBUS;
+import mpp.ssa.bus.*;
 import mpp.ssa.domain.*;
 
 import java.io.IOException;
@@ -115,7 +112,9 @@ public class HomeController {
                 customer.setUserType(UserType.getUserType(customer.calculateTotalOrders()));
                 Notification.Notifier.INSTANCE.notifySuccess("Success","Login Successfully");
 
-
+                // get user settings
+                List<UserSetting> userSettings = UserSettingBUS.getUserSettingBUS().getUserSettingsByUsername(USERNAME);
+                customer.setUserSettingList(userSettings);
 
                 Main.userData.setCustomer(customer);
             }

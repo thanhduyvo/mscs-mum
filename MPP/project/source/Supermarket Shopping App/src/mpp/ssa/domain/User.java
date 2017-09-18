@@ -1,5 +1,7 @@
 package mpp.ssa.domain;
 
+import java.util.List;
+
 public class User {
 
     /**
@@ -10,6 +12,16 @@ public class User {
 
     public User(String username) {
         setUsername(username);
+    }
+
+    private List<UserSetting> userSettingList;
+
+    public List<UserSetting> getUserSettingList() {
+        return userSettingList;
+    }
+
+    public void setUserSettingList(List<UserSetting> userSettingList) {
+        this.userSettingList = userSettingList;
     }
 
     private String username;
