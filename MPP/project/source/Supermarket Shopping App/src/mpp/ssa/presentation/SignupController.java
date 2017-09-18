@@ -44,21 +44,21 @@ public class SignupController extends HomeController {
     public void createSignupPane(){
         try {
             SignupPane = FXMLLoader.load(getClass().getResource("signup.fxml"));
-            setInfo();
+            setInfo(SignupPane);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
     @FXML
 
-    public void setInfo(){
-        txtAddress = (TextField) SignupPane.lookup("#txtAddress");
-        txtCardNumber = (TextField) SignupPane.lookup("#txtCardNumber");
-        txtEmail = (TextField) SignupPane.lookup("#txtEmail");
-        txtName = (TextField) SignupPane.lookup("#txtName");
-        txtPhone = (TextField) SignupPane.lookup("#txtPhone");
-        txtCustomerName = (TextField) SignupPane.lookup("#txtCustomerName");
-        txtShippingAddress = (TextField) SignupPane.lookup("#txtShippingAddress");
+    public void setInfo(AnchorPane Pane){
+        txtAddress = (TextField) Pane.lookup("#txtAddress");
+        txtCardNumber = (TextField) Pane.lookup("#txtCardNumber");
+        txtEmail = (TextField) Pane.lookup("#txtEmail");
+        txtName = (TextField) Pane.lookup("#txtName");
+        txtPhone = (TextField) Pane.lookup("#txtPhone");
+        txtCustomerName = (TextField) Pane.lookup("#txtCustomerName");
+        txtShippingAddress = (TextField) Pane.lookup("#txtShippingAddress");
     }
 
     @FXML

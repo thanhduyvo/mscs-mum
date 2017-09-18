@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.SignupController">
    <children>
-      <Text layoutX="320.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up" wrappingWidth="160.0">
+      <Text layoutX="320.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify" wrappingWidth="160.0">
          <font>
             <Font size="36.0" />
          </font>
@@ -24,8 +24,8 @@
       <Label layoutX="467.0" layoutY="200.0" text="Email: " />
       <Label layoutX="466.0" layoutY="252.0" text="Phone:" />
       <Button layoutX="690.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleHome" text="Home" />
-      <Text layoutX="62.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
-      <TextField fx:id="txtName" layoutX="186.0" layoutY="91.0">
+      <Text layoutX="41.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password:" />
+      <TextField fx:id="txtName" editable="false" layoutX="186.0" layoutY="91.0">
          <tooltip>
             <Tooltip text="This is your Login ID" />
          </tooltip></TextField>

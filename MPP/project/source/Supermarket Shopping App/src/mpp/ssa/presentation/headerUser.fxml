@@ -17,7 +17,7 @@
          </font>
       </Label>
       <Text layoutX="521.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" />
-      <Label fx:id="labelUserName" layoutX="604.0" layoutY="34.0" prefHeight="27.0" prefWidth="109.0" textFill="#f50000">
+      <Label fx:id="labelUserName" layoutX="604.0" layoutY="34.0" onMouseClicked="#handleModify" prefHeight="27.0" prefWidth="109.0" textFill="#f50000">
          <font>
             <Font size="20.0" />
          </font>

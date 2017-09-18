@@ -60,6 +60,13 @@ public class HomeController {
         signupController.createSignupPane();
         Main.primaryStage.setScene(new Scene(signupController.SignupPane,838,455));
     }
+    @FXML
+    public void handleModify(MouseEvent event){
+        ModifyController modifyController = new ModifyController();
+        modifyController.createModifyPane();
+        Main.primaryStage.setScene(new Scene(modifyController.ModifyPane,838,455));
+
+    }
 
     @FXML
     public void handleOrderBtn(ActionEvent event){
