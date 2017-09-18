@@ -62,7 +62,7 @@ public class SignupController extends HomeController {
 
     @FXML
     public void handleConfirmBtn(){
-       saveCustomer();
+       saveCustomer(this.customer);
        CustomerBUS.getCustomerBUS().register(customer);
        if(!valid){
            return;
@@ -74,7 +74,7 @@ public class SignupController extends HomeController {
 
     }
 
-    public void saveCustomer() {
+    public void saveCustomer(Customer customer) {
         customer.setAddress(txtAddress.getText());
         customer.setBankCardNo(txtCardNumber.getText());
         customer.setUsername(txtName.getText());

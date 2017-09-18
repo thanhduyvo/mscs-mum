@@ -42,7 +42,7 @@ public class ProductDetailController extends HomeController {
             labelCost = (Label) anchorPane.lookup("#labelCost");
             btnBuy1Click = new Button();
             btnBuy1Click = (Button) anchorPane.lookup("#btnBuy1Click");
-            if(!customer.isLoginStatus()){
+            if(!customer.isLoginStatus() || !ModifyController.Buy1click){
                 btnBuy1Click.setVisible(false);
             }
         } catch (IOException e) {
