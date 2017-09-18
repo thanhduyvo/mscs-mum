@@ -90,11 +90,15 @@ public class CustomerBUS implements ICustomerBUS {
             customerDO.setShippingAddress(customer.getShippingAddress());
             boolean retValue = customerDAO.updateCustomer(customerDO);
             if(retValue) {
-                // update user
-                UserDO userDO = new UserDO();
-                userDO.setUsername(customer.getUsername());
-                userDO.setPassword(SecurityHelper.hashMD5String(customer.getPassword()).toLowerCase());
-                return userDAO.updateUser(userDO);
+                if(!customer.getPassword().equals("")) {
+                    // update user
+                    UserDO userDO = new UserDO();
+                    userDO.setUsername(customer.getUsername());
+                    userDO.setPassword(SecurityHelper.hashMD5String(customer.getPassword()).toLowerCase());
+                    return userDAO.updateUser(userDO);
+                } else {
+                    return true;
+                }
             }
         } catch (SQLException ex) {
         }
