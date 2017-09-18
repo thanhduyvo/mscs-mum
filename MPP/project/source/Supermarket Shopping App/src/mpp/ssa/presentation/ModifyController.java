@@ -15,7 +15,7 @@ import java.io.IOException;
 public class ModifyController extends SignupController {
     AnchorPane ModifyPane = new AnchorPane();
     Boolean valid = true;
-    public static Boolean Buy1click;
+    public static Boolean Buy1click = false;
 
     @FXML
     private TextField txtPhone;

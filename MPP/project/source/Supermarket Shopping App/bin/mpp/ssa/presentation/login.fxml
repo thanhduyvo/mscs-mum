@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.HomeController">
+   <children>
+      <TextField fx:id="UsernameField" layoutX="142.0" layoutY="161.0" promptText="Login ID" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="161.0" />
+      <PasswordField fx:id="PasswordField" layoutX="142.0" layoutY="214.0" onAction="#handleCheckLogin" promptText="Password" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="214.0" />
+      <Button fx:id="CheckLoginBtn" layoutX="400.0" layoutY="214.0" mnemonicParsing="false" onAction="#handleCheckLogin" prefHeight="39.0" prefWidth="90.0" text="Login" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="214.0" />
+      <Hyperlink layoutX="142.0" layoutY="276.0" prefHeight="35.0" prefWidth="224.0" text="Sigup now" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="276.0" />
+      <Text layoutX="222.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="100.205078125" AnchorPane.leftAnchor="222.0" AnchorPane.topAnchor="66.0" />
+      <Button layoutX="32.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back" />
+      <Button layoutX="445.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleHome" text="Home" />
+   </children>
+</AnchorPane>

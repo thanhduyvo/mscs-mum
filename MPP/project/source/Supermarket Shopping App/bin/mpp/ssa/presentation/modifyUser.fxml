@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.ModifyController">
+   <children>
+      <Text layoutX="320.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify" wrappingWidth="160.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Button layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back" />
+      <Label layoutX="40.0" layoutY="335.0" text="Card Number: " />
+      <Label layoutX="40.0" layoutY="387.0" text="Shipping Address: " />
+      <TextField fx:id="txtCardNumber" layoutX="249.0" layoutY="329.0" promptText="XXX-XXXX-XXX-XXXX" />
+      <TextField fx:id="txtShippingAddress" layoutX="249.0" layoutY="387.0" />
+      <Label layoutX="31.0" layoutY="141.0" text="Username:" />
+      <Label layoutX="467.0" layoutY="150.0" text="Address: " />
+      <Label layoutX="467.0" layoutY="200.0" text="Email: " />
+      <Label layoutX="466.0" layoutY="252.0" text="Phone:" />
+      <Button layoutX="690.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleHome" text="Home" />
+      <Text layoutX="31.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password:" />
+      <TextField fx:id="txtName" editable="false" layoutX="176.0" layoutY="135.0">
+         <tooltip>
+            <Tooltip text="This is your Login ID" />
+         </tooltip></TextField>
+      <PasswordField fx:id="passPassword" layoutX="176.0" layoutY="181.0" />
+      <TextField fx:id="txtAddress" layoutX="562.0" layoutY="144.0" />
+      <TextField fx:id="txtEmail" layoutX="562.0" layoutY="194.0" />
+      <TextField fx:id="txtPhone" layoutX="562.0" layoutY="252.0" />
+      <Button layoutX="651.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleConfirmBtn" text="Confirm" />
+      <Label layoutX="466.0" layoutY="97.0" text="Name:" />
+      <TextField fx:id="txtCustomerName" layoutX="565.0" layoutY="91.0" />
+      <Label layoutX="40.0" layoutY="84.0" text="Rank:" />
+      <Label fx:id="lbRank" layoutX="176.0" layoutY="84.0" prefHeight="27.0" prefWidth="211.0" />
+      <CheckBox fx:id="cbBuy" layoutX="31.0" layoutY="258.0" mnemonicParsing="false" text="Buy 1-click" />
+   </children>
+</AnchorPane>

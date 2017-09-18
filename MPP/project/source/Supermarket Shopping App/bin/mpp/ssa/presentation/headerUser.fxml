@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="96.0" prefWidth="1042.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.HomeController">
+   <children>
+      <Hyperlink layoutX="940.0" layoutY="16.0" onAction="#handleCart" prefHeight="48.0" prefWidth="60.0" text="Cart" AnchorPane.rightAnchor="6.0" />
+      <Label layoutX="371.0" layoutY="9.0" text="HOME">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Text layoutX="521.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" />
+      <Label fx:id="labelUserName" layoutX="604.0" layoutY="34.0" onMouseClicked="#handleModify" prefHeight="27.0" prefWidth="109.0" textFill="#f50000">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="53.0" fitWidth="74.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="863.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleOrderBtn" prefHeight="39.0" prefWidth="99.0" text="Order History" AnchorPane.rightAnchor="80.0" />
+      <Button layoutX="110.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleClose" text="Close" />
+      <Button layoutX="757.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleSignOut" text="Sign out" AnchorPane.rightAnchor="200.0" />
+   </children>
+</AnchorPane>

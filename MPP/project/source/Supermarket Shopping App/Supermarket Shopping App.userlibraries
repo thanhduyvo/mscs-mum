@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Enzo-0.3.6">
+    <archive path="C:/My Coding/DuyVo/MPP/project/source/Supermarket Shopping App/jar/Enzo-0.3.6.jar" />
+  </library>
+  <library name="sqlite-jdbc-3.20.0">
+    <archive path="C:/My Coding/DuyVo/MPP/project/source/Supermarket Shopping App/jar/sqlite-jdbc-3.20.0.jar" />
+  </library>
+  <library name="tilesfx-1.4.5">
+    <archive path="C:/My Coding/DuyVo/MPP/project/source/Supermarket Shopping App/jar/tilesfx-1.4.5.jar" />
+  </library>
+</eclipse-userlibraries>
+

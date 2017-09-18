@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.ssa.presentation.OrderController">
+   <children>
+      <Label layoutX="293.0" layoutY="14.0" text="Order History" AnchorPane.leftAnchor="293.0" AnchorPane.rightAnchor="294.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listView" layoutX="3.0" layoutY="147.0" prefHeight="405.0" prefWidth="841.0" />
+      <Button layoutX="30.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="27.0" />
+      <Button layoutX="714.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleHome" text="Home" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="27.0" />
+      <Label layoutX="19.0" layoutY="110.0" text="Order ID" />
+      <Label layoutX="293.0" layoutY="110.0" text="Total Cost" />
+      <Label layoutX="471.0" layoutY="110.0" text="Date Created" />
+      <Label layoutX="660.0" layoutY="110.0" text="Date Shipped" />
+   </children>
+</AnchorPane>
