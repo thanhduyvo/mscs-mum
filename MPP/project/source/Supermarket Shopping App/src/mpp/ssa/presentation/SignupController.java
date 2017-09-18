@@ -1,17 +1,19 @@
 package mpp.ssa.presentation;
 
+import eu.hansolo.enzo.notification.Notification;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import mpp.ssa.bus.CustomerBUS;
 import mpp.ssa.domain.Customer;
+import mpp.ssa.util.ValidationHelper;
 
 import java.io.IOException;
 
 public class SignupController extends HomeController {
     AnchorPane SignupPane = new AnchorPane();
+    Boolean valid = true;
 
     @FXML
     private TextField txtPhone;
@@ -47,6 +49,7 @@ public class SignupController extends HomeController {
             e.printStackTrace();
         }
     }
+    @FXML
 
     public void setInfo(){
         txtAddress = (TextField) SignupPane.lookup("#txtAddress");
@@ -62,6 +65,13 @@ public class SignupController extends HomeController {
     public void handleConfirmBtn(){
        saveCustomer();
        CustomerBUS.getCustomerBUS().register(customer);
+       if(!valid){
+           return;
+       }
+       else {
+           Notification.Notifier.INSTANCE.notifySuccess("Success","Sign up successful");
+           Main.primaryStage.setScene(Main.HOME_SCENE);
+       }
 
     }
 
@@ -71,7 +81,15 @@ public class SignupController extends HomeController {
         customer.setUsername(txtName.getText());
         customer.setPassword(passPassword.getText());
         customer.setCustomerName(txtCustomerName.getText());
-        customer.setEmail(txtEmail.getText());
+        if(ValidationHelper.validateEmailAddress(txtEmail.getText())){
+            customer.setEmail(txtEmail.getText());
+            valid = true;
+        }
+        else {
+            Notification.Notifier.INSTANCE.notifyWarning("Warning","Invalid email");
+            valid = false;
+        }
+
         customer.setShippingAddress(txtShippingAddress.getText());
     }
 }

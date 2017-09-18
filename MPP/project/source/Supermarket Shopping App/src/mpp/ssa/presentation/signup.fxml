@@ -31,7 +31,7 @@
          </tooltip></TextField>
       <PasswordField fx:id="passPassword" layoutX="186.0" layoutY="137.0" />
       <TextField fx:id="txtAddress" layoutX="562.0" layoutY="144.0" />
-      <TextField fx:id="txtEmail" layoutX="562.0" layoutY="194.0" />
+      <TextField fx:id="txtEmail" layoutX="562.0" layoutY="194.0" onAction="#handleEmail" onInputMethodTextChanged="#handleEmail" />
       <TextField fx:id="txtPhone" layoutX="562.0" layoutY="252.0" />
       <Button layoutX="651.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleConfirmBtn" text="Confirm" />
       <Text layoutX="565.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="After Sign up successfully, you have to Login" wrappingWidth="214.2236328125" />

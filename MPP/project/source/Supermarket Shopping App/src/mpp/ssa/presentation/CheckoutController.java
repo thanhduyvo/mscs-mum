@@ -51,7 +51,8 @@ public class CheckoutController extends HomeController {
             setInformation();
             lbAddress.setText(customer.getAddress());
             lbEmail.setText(customer.getEmail());
-            lbName.setText(customer.getCustomerName());
+            lbName.setText(customer.getCustomerName());;
+            lbDiscount.setText("Discount");
             lbOriginCost.setText("$" + String.valueOf(calculateOriginCost()));
             lbTotalCost.setText("$" + String.valueOf(calculateTotalCost()));
 
